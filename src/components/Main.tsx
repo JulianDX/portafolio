@@ -25,7 +25,7 @@ const Main = () => {
         </div>
         <div className="col-span-1 mx-auto">
           <img
-            src="img/0fe00f0759660c97dc4668cae473378e.png"
+            src="img/memoicon.png"
             alt="Imagen perfil"
           />
         </div>

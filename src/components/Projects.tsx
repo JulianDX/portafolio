@@ -5,29 +5,35 @@ export const Projects = () => {
         <h2 className="text-white text-4xl text-center my-5 pb-3">Proyectos</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 py-6">
           {/* Card */}
-          <div className="bg-black bg-opacity-40 rounded-xl hover:scale-101 transition ease-linear">
-            <img
-              className="rounded-xl max-w-80 w-full mx-auto -mt-5"
-              src="/img/veterinaria.jpg"
-              alt="proyecto veterinaria"
-            />
-            <h3 className="text-center text-white font-bold pt-4">
+          <div className="bg-black bg-opacity-50 rounded-xl hover:scale-101 transition ease-linear">
+            <a href="https://veterinaria-ashy.vercel.app/" target="blank">
+              <img
+                className="rounded-xl max-w-80 w-full mx-auto -mt-5"
+                src="/img/veterinaria.jpg"
+                alt="proyecto veterinaria"
+              />
+            </a>
+            <h3 className="text-center text-white font-semibold pt-4">
               Veterinaria
             </h3>
             <p className="p-3 font-normal text-white">
               Aplicación web para administrar pacientes de una veterinaria.
             </p>
-            <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 gap-4 p-3 pt-2">
-              <span className="bg-green-100 text-center text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+            <div className="grid grid-cols-2 gap-4 p-3 pt-2">
+              <span className="font-semibold inline-flex items-center justify-items-center gap-1.5 py-1.5 px-3 rounded-full text-xs bg-emerald-700 text-emerald-100 shadow-md shadow-green-400">
+                <img className="h-5 w-5" src="img/mongo.svg" alt="mongo" />
                 Mongo
               </span>
-              <span className="bg-gray-100 text-center text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+              <span className="font-semibold inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs bg-gray-600 text-gray-100 shadow-md shadow-gray-400">
+                <img className="h-5 w-5" src="img/express.svg" alt="express" />
                 Express
               </span>
-              <span className="bg-blue-100 text-center text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+              <span className="font-semibold inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs bg-sky-800 text-cyan-100 shadow-md shadow-cyan-400">
+                <img className="h-5 w-5" src="img/react.svg" alt="react" />
                 React
               </span>
-              <span className="bg-yellow-100 text-center text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+              <span className="font-semibold inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs bg-violet-700 text-white shadow-md shadow-purple-400">
+                <img className="h-5 w-5" src="img/node.svg" alt="node" />
                 Node
               </span>
             </div>
@@ -36,7 +42,7 @@ export const Projects = () => {
                 <a
                   href="https://github.com/stars/JulianDX/lists/veterinaria"
                   target="blank"
-                  className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 hover:from-blue-600 hover:to-purple-500 hover:text-white dark:text-white"
+                  className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-md group bg-gradient-to-br from-purple-600 to-blue-500 hover:text-white dark:text-white"
                 >
                   <svg
                     className="w-7 h-7 ml-2"
@@ -59,9 +65,9 @@ export const Projects = () => {
               <a
                 href="https://veterinaria-ashy.vercel.app/"
                 target="blank"
-                className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 hover:text-white dark:text-white"
+                className="text-left w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 text-sm font-medium text-white rounded-md bg-gradient-to-br from-purple-500 to-pink-500 hover:text-white"
               >
-                <span className="font-bold relative w-full h-full px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
+                <span className="font-bold w-full h-full px-5 py-2.5">
                   Demo
                 </span>
               </a>

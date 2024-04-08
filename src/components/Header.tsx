@@ -25,7 +25,7 @@ const Header = () => {
       className={`z-50 shadow-sky-600 sticky top-0 w-full transition duration-600 ease-in-out animate-fade-down animate-once animate-normal ${
         scrollPos > 100 ? "shadow-md" : "bg-transparent"
       }`}
-      style={{ backgroundColor: `rgba(0, 25, 40, ${opacity})` }}
+      style={{ backgroundColor: `rgba(0, 16, 50, ${opacity})` }}
     >
       <div className="flex flex-col lg:flex-row justify-between items-end md:items-center max-w-6xl mx-auto px-2">
         {/* Logo */}
@@ -36,16 +36,7 @@ const Header = () => {
           >
             <h1 className="text-white text-2xl font-extrabold">
               {`<`}
-              <span
-                className={`${
-                  opacity === 0.95
-                    ? "bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text"
-                    : "text-white"
-                }`}
-              >
-                Julián Roa Palacio
-              </span>{" "}
-              {`/>`}
+              <span>Julián Roa Palacio</span> {`/>`}
             </h1>
           </Link>
           <img
