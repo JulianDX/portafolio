@@ -18,14 +18,14 @@ const Header = () => {
     };
   }, []);
 
-  const opacity = scrollPos > 10 ? Math.min(scrollPos / 100, 1) : 0;
+  const opacity = scrollPos > 10 ? Math.min(scrollPos / 100, 0.95) : 0;
 
   return (
     <header
-      className={`z-50 sticky top-0 w-full transition duration-600 ease-in-out animate-fade-down animate-once animate-normal ${
-        scrollPos > 100 ? "bg-black" : "bg-transparent"
+      className={`z-50 shadow-sky-600 sticky top-0 w-full transition duration-600 ease-in-out animate-fade-down animate-once animate-normal ${
+        scrollPos > 100 ? "shadow-md" : "bg-transparent"
       }`}
-      style={{ backgroundColor: `rgba(0, 0, 0, ${opacity})` }}
+      style={{ backgroundColor: `rgba(0, 25, 40, ${opacity})` }}
     >
       <div className="flex flex-col lg:flex-row justify-between items-end md:items-center max-w-6xl mx-auto px-2">
         {/* Logo */}
@@ -38,7 +38,7 @@ const Header = () => {
               {`<`}
               <span
                 className={`${
-                  opacity === 1
+                  opacity === 0.95
                     ? "bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text font-extrabold"
                     : "text-white"
                 }`}
@@ -65,30 +65,30 @@ const Header = () => {
         >
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg hover:text-sky-200 font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
           >
-            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-sky-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Sobre Mí
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg hover:text-sky-200 font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
           >
-            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-sky-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Habilidades
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg hover:text-sky-200 font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
           >
-            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-sky-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Proyectos
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg hover:text-sky-200 font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
           >
-            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-sky-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Contacto
           </a>
           <a

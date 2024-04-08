@@ -11,24 +11,24 @@ export const Abilities = () => {
         <div className="p-2">
           <ul className="text-white grid lg:grid-cols-2 gap-4 font-semibold">
             <div className="space-y-4">
-              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-black md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
+              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
                 Honestidad
               </li>
-              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-black md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
+              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
                 Respeto
               </li>
-              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-black md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
+              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
                 Adaptabilidad
               </li>
             </div>
             <div className="space-y-4">
-              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-black md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
+              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
                 Pensamiento Crítico
               </li>
-              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-black md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
+              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
                 Trabajo en Equipo
               </li>
-              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-black md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
+              <li className="text-center lg:text-left bg-white bg-opacity-15 md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-orange-500 hover:bg-white hover:text-black transition-colors ease-linear duration-300">
                 Empatía
               </li>
             </div>
@@ -43,77 +43,77 @@ export const Abilities = () => {
         </div>
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 justify-items-center items-center p-2 gap-5">
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/html.svg"
             alt="html"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/css.svg"
             alt="css"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/sass.svg"
             alt="sass"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/tailwind.svg"
             alt="tailwind"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/js.svg"
             alt="javascript"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/ts.svg"
             alt="typescript"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/react.svg"
             alt="react"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/mysql.svg"
             alt="mysql"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/mongo.svg"
             alt="mongo"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/php.svg"
             alt="php"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/node.svg"
             alt="node"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-4 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-3 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-4 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-3 hover:animate-wiggle hover:animate-infinite"
             src="img/postman.svg"
             alt="postman"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/java.svg"
             alt="java"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/github.svg"
             alt="github"
           />
           <img
-            className="bg-white bg-opacity-25 md:bg-black p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+            className="bg-white bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
             src="img/git.svg"
             alt="git"
           />
