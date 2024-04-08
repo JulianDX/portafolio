@@ -34,12 +34,12 @@ const Header = () => {
             to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <h1 className="text-white text-2xl font-bold">
+            <h1 className="text-white text-2xl font-extrabold">
               {`<`}
               <span
                 className={`${
                   opacity === 0.95
-                    ? "bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text font-extrabold"
+                    ? "bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text"
                     : "text-white"
                 }`}
               >
