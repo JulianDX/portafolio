@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const [scrollPos, setScrollPos] = useState(0);
@@ -30,15 +29,13 @@ const Header = () => {
       <div className="flex flex-col lg:flex-row justify-between items-end md:items-center max-w-6xl mx-auto px-2">
         {/* Logo */}
         <div className="flex justify-between w-full md:w-auto items-center p-4">
-          <Link
-            to="/"
+          <h1
+            className="text-white text-2xl font-extrabold cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <h1 className="text-white text-2xl font-extrabold">
-              {`<`}
-              <span>Julián Roa Palacio</span> {`/>`}
-            </h1>
-          </Link>
+            {`<`}
+            <span>Julián Roa Palacio</span> {`/>`}
+          </h1>
           <img
             className="max-w-9 md:hidden"
             src="/img/barras.svg"

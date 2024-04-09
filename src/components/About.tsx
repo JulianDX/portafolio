@@ -4,7 +4,7 @@ export const About = () => {
       <div className="rounded-lg bg-gray-100 bg-opacity-10 max-w-4xl mx-auto p-6 md:p-8 text-white gap-5">
         <div className="opacity-100">
           <h2 className="items-center text-3xl font-extrabold">
-            Acerca de Mí
+            Un Poco Sobre Mí...
           </h2>
           <br />
         </div>

@@ -24,10 +24,7 @@ const Main = () => {
           </div>
         </div>
         <div className="col-span-1 mx-auto">
-          <img
-            src="img/memoicon.png"
-            alt="Imagen perfil"
-          />
+          <img src="img/memoicon.webp" alt="Imagen perfil" />
         </div>
       </div>
     </>
