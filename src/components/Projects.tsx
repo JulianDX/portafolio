@@ -64,7 +64,7 @@ export const Projects = () => {
                     <a
                       href={project.repositorio}
                       target="_blank"
-                      className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-md group bg-gradient-to-br from-purple-600 to-blue-500 hover:to-orange-400 hover:text-white dark:text-white"
+                      className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-white rounded-md group bg-gradient-to-br from-purple-600 to-blue-500 hover:to-orange-400 hover:text-white dark:text-white"
                     >
                       <svg
                         className="w-7 h-7 ml-2"
