@@ -3,7 +3,10 @@ import { projects } from "../data/data";
 export const Projects = () => {
   return (
     <section className="px-2 max-w-xl md:max-w-6xl mx-auto pb-10">
-      <hr hidden className="bg-emerald-600 text-emerald-100 shadow-emerald-400" />
+      <hr
+        hidden
+        className="bg-emerald-600 text-emerald-100 shadow-emerald-400"
+      />
       <hr hidden className="bg-violet-600 text-violet-100 shadow-violet-400" />
       <hr hidden className="bg-gray-600 text-gray-100 shadow-gray-400" />
       <hr hidden className="bg-sky-600 text-sky-100 shadow-sky-400" />
@@ -23,6 +26,8 @@ export const Projects = () => {
                     src={`/img/${project.nombre}.jpg`}
                     alt={project.nombre}
                     loading="lazy"
+                    width={300}
+                    height={300}
                   />
                 </a>
                 <h3 className="capitalize text-center text-white font-semibold pt-4">
@@ -43,6 +48,8 @@ export const Projects = () => {
                           loading="lazy"
                           src={`img/${tecnologia.nombre}.svg`}
                           alt={tecnologia.nombre}
+                          width={300}
+                          height={300}
                         />
                         {tecnologia.nombre}
                       </span>

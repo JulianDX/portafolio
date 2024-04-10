@@ -68,9 +68,11 @@ export const Contact = () => {
   };
 
   return (
-    <section className="max-w-xl md:max-w-2xl mx-auto pb-10 px-4">
+    <section className="max-w-xl md:max-w-2xl mx-auto pb-10 px-4 bg-black p-8 bg-opacity-60 rounded-lg">
       <h2 className="text-white text-4xl text-center">Contacto</h2>
-      <p className="text-white text-center mt-2">Llena el formulario para ponernos en contacto</p>
+      <p className="text-white text-center mt-2">
+        Llena el formulario para ponernos en contacto
+      </p>
       <form className="py-4" onSubmit={(e) => handleSubmit(e)}>
         <div className="md:grid md:grid-cols-2 md:gap-5">
           <div className="flex flex-col">
@@ -78,8 +80,10 @@ export const Contact = () => {
               Nombre
             </label>
             <input
-              className={`rounded p-2 bg-gray-800 bg-opacity-50 text-white border-gray-100 border-2 focus:border-sky-400 outline-none ${
-                !nameAlert && "border-red-600 focus:border-red-600"
+              className={`rounded p-2 bg-gray-800 bg-opacity-50 text-white border-gray-100 border-2 outline-none ${
+                !nameAlert
+                  ? "border-red-600 focus:border-red-600"
+                  : "focus:border-sky-400"
               }`}
               type="text"
               onChange={(e) => setNombre(e.target.value)}
@@ -95,8 +99,10 @@ export const Contact = () => {
               Email
             </label>
             <input
-              className={`rounded p-2 bg-gray-800 bg-opacity-50 text-white border-gray-100 border-2 focus:border-sky-400 outline-none ${
-                !emailAlert && "border-red-600 focus:border-red-600"
+              className={`rounded p-2 bg-gray-800 bg-opacity-50 text-white border-gray-100 border-2 outline-none ${
+                !emailAlert
+                  ? "border-red-600 focus:border-red-600"
+                  : "focus:border-sky-400"
               }`}
               type="email"
               onChange={(e) => setEmail(e.target.value)}
@@ -113,8 +119,10 @@ export const Contact = () => {
             Asunto
           </label>
           <input
-            className={`rounded p-2 bg-gray-800 bg-opacity-50 text-white border-gray-100 border-2 focus:border-sky-400 outline-none ${
-              !subjectAlert && "border-red-600 focus:border-red-600"
+            className={`rounded p-2 bg-gray-800 bg-opacity-50 text-white border-gray-100 border-2 outline-none ${
+              !subjectAlert
+                ? "border-red-600 focus:border-red-600"
+                : "focus:border-sky-400"
             }`}
             type="text"
             onChange={(e) => setAsunto(e.target.value)}
@@ -130,8 +138,10 @@ export const Contact = () => {
             Mensaje
           </label>
           <textarea
-            className={`rounded resize-none p-2 bg-gray-800 bg-opacity-50 text-white border-gray-100 border-2 focus:border-sky-400 outline-none ${
-              !messageAlert && "border-red-600 focus:border-red-600"
+            className={`rounded p-2 bg-gray-800 bg-opacity-50 text-white border-gray-100 border-2 outline-none resize-none ${
+              !messageAlert
+                ? "border-red-600 focus:border-red-600"
+                : "focus:border-sky-400"
             }`}
             id="mensaje"
             cols={30}

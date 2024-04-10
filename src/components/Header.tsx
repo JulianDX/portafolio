@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header
-      className={`z-50 shadow-sky-600 sticky top-0 w-full transition duration-600 ease-in-out animate-fade-down animate-once animate-normal ${
+      className={`z-50 shadow-sky-600 sticky top-0 w-full lg:transition lg:duration-600 lg:ease-in-out lg:animate-fade-down lg:animate-once lg:animate-normal ${
         scrollPos > 100 ? "shadow-md" : "bg-transparent"
       }`}
       style={{ backgroundColor: `rgba(0, 16, 50, ${opacity})` }}
@@ -34,13 +34,15 @@ const Header = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             {`<`}
-            <span>Julián Roa Palacio</span> {`/>`}
+            <span>Julián Dev</span> {`/>`}
           </h1>
           <img
             className="max-w-9 md:hidden"
             src="/img/barras.svg"
             alt="menu desplegable"
             onClick={() => setVisibleNav(!visibleNav)}
+            width={40}
+            height={40}
           />
         </div>
         {/* Navigation */}

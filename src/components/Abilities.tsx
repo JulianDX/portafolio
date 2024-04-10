@@ -37,10 +37,12 @@ export const Abilities = () => {
             return (
               <img
                 key={habilidad.tecnologia}
-                className="transition-all ease-linear bg-gray-300 bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-auto rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
+                className="transition-all ease-linear bg-gray-300 bg-opacity-25 p-3 md:bg-opacity-25 h-20 w-20 rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite"
                 src={`img/${habilidad.tecnologia}.svg`}
                 alt={habilidad.tecnologia}
                 loading="lazy"
+                width={80}
+                height={80}
               />
             );
           })}

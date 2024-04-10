@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        pattern: "url('/img/bgvector.webp')", // Adjust the path as needed
+        pattern: "url('/img/bgvector.svg')", // Adjust the path as needed
       },
       letterSpacing: {
         puntoCinco: ".5px",
