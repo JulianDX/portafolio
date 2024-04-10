@@ -79,7 +79,7 @@ export const Contact = () => {
         behavior: "smooth",
       });
       setCanSend(false);
-      const peticion = await axios.post(`${import.meta.env.VITE_BACKEND_URL}`, {
+      const peticion = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/contact`, {
         nombre,
         email,
         mensaje,
