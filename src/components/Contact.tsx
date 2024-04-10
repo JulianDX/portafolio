@@ -232,6 +232,7 @@ export const Contact = () => {
           <p className="py-4">Otras formas de contacto:</p>
           <div className="flex gap-3">
             <a
+              aria-label="Facebook"
               href="https://www.facebook.com/profile.php?id=100008319888002"
               target="_blank"
               className="bg-blue-100 cursor-pointer rounded-md shadow-md shadow-transparent transition-all duration-300 hover:shadow-indigo-200"
@@ -258,6 +259,7 @@ export const Contact = () => {
               </svg>
             </a>
             <a
+              aria-label="Facebook"
               href="https://wa.me/573224250426"
               target="_blank"
               className="w-12 h-12 flex items-center justify-center bg-gray-100 cursor-pointer rounded-md shadow-md shadow-transparent transition-all duration-300 hover:shadow-indigo-200"
