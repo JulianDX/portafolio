@@ -85,7 +85,7 @@ export const Contact = () => {
         mensaje,
         asunto,
       });
-      console.log(peticion.data)
+      setAlertMessage({ msg: peticion.data, type: "error" });
       setSpinner(true);
     } catch (error) {
       window.scrollTo({
