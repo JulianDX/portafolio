@@ -89,20 +89,26 @@ export const Contact = () => {
       );
       setAlertMessage({ msg: peticion.data, type: "success" });
       setSpinner(true);
+      setNombre("");
+      setEmail("");
+      setMensaje("");
+      setAsunto("");
+      setMounted(false);
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        console.log(error.status);
-        console.error(error.response?.data);
-        // Do something with this error...
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        });
+        setAlertMessage({
+          msg: error.response?.data.msg,
+          type: "error",
+        });
+        setSpinner(true);
       } else {
         console.error(error);
       }
     }
-    setNombre("");
-    setEmail("");
-    setMensaje("");
-    setAsunto("");
-    setMounted(false);
   };
 
   return (
