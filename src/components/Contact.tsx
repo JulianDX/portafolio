@@ -1,5 +1,4 @@
 import axios from "axios";
-import request from "axios";
 import { useEffect, useState } from "react";
 import { FormEvent } from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
