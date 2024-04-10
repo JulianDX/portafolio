@@ -2,15 +2,18 @@ import { projects } from "../data/data";
 
 export const Projects = () => {
   return (
-    <section className="px-2 max-w-xl md:max-w-6xl mx-auto pb-10">
+    <section
+      id="proyectos"
+      className="px-2 max-w-xl md:max-w-6xl mx-auto pb-10"
+    >
       <hr
         hidden
-        className="bg-emerald-600 text-emerald-100 shadow-emerald-400"
+        className="bg-emerald-700 text-emerald-100 shadow-emerald-400"
       />
-      <hr hidden className="bg-violet-600 text-violet-100 shadow-violet-400" />
-      <hr hidden className="bg-gray-600 text-gray-100 shadow-gray-400" />
-      <hr hidden className="bg-sky-600 text-sky-100 shadow-sky-400" />
-      <hr hidden className="bg-orange-600 text-orange-100 shadow-orange-400" />
+      <hr hidden className="bg-violet-700 text-violet-100 shadow-violet-400" />
+      <hr hidden className="bg-gray-700 text-gray-100 shadow-gray-400" />
+      <hr hidden className="bg-sky-700 text-sky-100 shadow-sky-400" />
+      <hr hidden className="bg-orange-700 text-orange-100 shadow-orange-400" />
       <h2 className="text-white text-4xl text-center my-5 pb-3">Proyectos</h2>
       <section className="pb-10 bg-white rounded-xl bg-opacity-15 border-solid p-4 border-white border-2">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0">
@@ -41,7 +44,7 @@ export const Projects = () => {
                     return (
                       <span
                         key={tecnologia.nombre}
-                        className={`capitalize font-semibold inline-flex items-center justify-items-center gap-1.5 py-1.5 px-3 rounded-full text-xs bg-${tecnologia.color}-600 text-${tecnologia.color}-100 shadow-md shadow-${tecnologia.color}-400`}
+                        className={`capitalize font-semibold inline-flex items-center justify-items-center gap-1.5 py-1.5 px-3 rounded-full text-xs bg-${tecnologia.color}-700 text-${tecnologia.color}-100 shadow-md shadow-${tecnologia.color}-400`}
                       >
                         <img
                           className="h-5 w-5"
@@ -81,15 +84,17 @@ export const Projects = () => {
                       </span>
                     </a>
                   </div>
-                  <a
-                    href={project.url}
-                    target="blank"
-                    className="text-left w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 text-sm font-medium text-white rounded-md bg-gradient-to-br from-purple-500 to-pink-500 hover:to-teal-300 hover:text-white"
-                  >
-                    <span className="font-bold w-full h-full px-5 py-2.5">
-                      Demo
-                    </span>
-                  </a>
+                  {project.nombre !== "portafolio" && (
+                    <a
+                      href={project.url}
+                      target="blank"
+                      className="text-left w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 text-sm font-medium text-white rounded-md bg-gradient-to-br from-purple-500 to-pink-500 hover:to-teal-300 hover:text-white"
+                    >
+                      <span className="font-bold w-full h-full px-5 py-2.5">
+                        Demo
+                      </span>
+                    </a>
+                  )}
                 </div>
               </div>
             );

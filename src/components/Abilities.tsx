@@ -3,7 +3,7 @@ import { duras } from "../data/data";
 
 export const Abilities = () => {
   return (
-    <section className="max-w-xl md:max-w-5xl mx-auto pt-10">
+    <section id="habilidades" className="max-w-xl md:max-w-5xl mx-auto pt-10">
       <h2 className="text-white text-4xl text-center">Habilidades</h2>
       <div className="grid md:grid-cols-2 p-8 items-center gap-8">
         <div className="text-white text-4xl text-center">

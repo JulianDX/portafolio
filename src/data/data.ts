@@ -97,4 +97,16 @@ export const projects: projectType[] = [
       { nombre: "pug", color: "orange" },
     ],
   },
+  {
+    nombre: "portafolio",
+    url: "",
+    repositorio: "https://github.com/JulianDX/portafolio",
+    descripcion:
+      "Si te da curiosidad ver cómo está construido mi portafolio:",
+    tecnologias: [
+      { nombre: "react", color: "gray" },
+      { nombre: "tailwind", color: "violet" },
+      { nombre: "express", color: "sky" },
+    ],
+  },
 ];

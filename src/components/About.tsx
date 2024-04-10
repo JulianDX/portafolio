@@ -2,7 +2,7 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 export const About = () => {
   return (
-    <section className="px-2 lg:animate-fade-up lg:animate-once lg:animate-ease-in lg:animate-normal mt-5">
+    <section id="sobremi" className="px-2 lg:animate-fade-up lg:animate-once lg:animate-ease-in lg:animate-normal mt-5">
       <div className="rounded-lg bg-gray-100 bg-opacity-10 max-w-4xl mx-auto p-6 md:p-8 text-white gap-5">
         <div className="opacity-100">
           <h2 className="items-center text-3xl font-extrabold">
@@ -12,10 +12,10 @@ export const About = () => {
         </div>
         <div className="col-span-2 text-xl font-semibold">
           <p>
-            <span className="bg-gradient-to-r from-orange-300 to-pink-400 text-transparent bg-clip-text">Nombre Completo:</span> Julián Fernando Roa Palacio
+            <span className="bg-gradient-to-l from-cyan-200 to-blue-500 text-transparent bg-clip-text">Nombre Completo:</span> Julián Fernando Roa Palacio
           </p>
           <p className="mt-2">
-            <span className="bg-gradient-to-r from-orange-300 to-pink-400 text-transparent bg-clip-text">País:</span> Colombia{" "}
+            <span className="bg-gradient-to-l from-cyan-200 to-blue-500 text-transparent bg-clip-text">País:</span> Colombia{" "}
             <span className="rounded fi fi-co"></span>
           </p>
           <br />

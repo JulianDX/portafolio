@@ -1,7 +1,9 @@
 import axios from "axios";
+import request from "axios";
 import { useEffect, useState } from "react";
 import { FormEvent } from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
+import { Alert } from "@mui/material";
 
 export const Contact = () => {
   const [nombre, setNombre] = useState("");
@@ -9,8 +11,11 @@ export const Contact = () => {
   const [mensaje, setMensaje] = useState("");
   const [asunto, setAsunto] = useState("");
   const [mounted, setMounted] = useState(false);
+  const [spinner, setSpinner] = useState(true);
 
   const [canSend, setCanSend] = useState(false);
+
+  const [alertMessage, setAlertMessage] = useState({ msg: "", type: "" });
 
   const [nameAlert, setNameAlert] = useState(true);
   const [emailAlert, setEmailAlert] = useState(true);
@@ -57,18 +62,54 @@ export const Contact = () => {
       : setCanSend(false);
   }, [nombre, email, asunto, mensaje]);
 
+  useEffect(() => {
+    if (alertMessage.msg !== "") {
+      setTimeout(() => {
+        setAlertMessage({ msg: "", type: "" });
+      }, 5000);
+    }
+  }, [alertMessage.msg]);
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await axios.post("http://localhost:4000/contact", {
-      nombre,
-      email,
-      mensaje,
-      asunto,
-    });
+    setSpinner(false);
+    try {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
+      setCanSend(false);
+      const peticion = await axios.post("http://localhost:4000/contact", {
+        nombre,
+        email,
+        mensaje,
+        asunto,
+      });
+      setAlertMessage({ msg: peticion.data, type: "success" });
+      setSpinner(true);
+    } catch (error) {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
+      if (request.isAxiosError(error) && error.response) {
+        setAlertMessage({ msg: (error.response?.data).error, type: "error" });
+        setCanSend(true);
+        setSpinner(true);
+      }
+    }
+    setNombre("");
+    setEmail("");
+    setMensaje("");
+    setAsunto("");
+    setMounted(false);
   };
 
   return (
-    <section className="max-w-xl md:max-w-2xl mx-auto pb-10 px-4 bg-black p-8 bg-opacity-60 rounded-lg">
+    <section
+      id="contacto"
+      className="max-w-xl md:max-w-2xl mx-auto pb-10 px-4 bg-black p-8 bg-opacity-60 rounded-lg"
+    >
       <h2 className="text-white text-4xl text-center">Contacto</h2>
       <p className="text-white text-center mt-2">
         Llena el formulario para ponernos en contacto
@@ -89,6 +130,7 @@ export const Contact = () => {
               onChange={(e) => setNombre(e.target.value)}
               id="nombre"
               placeholder="Tu nombre"
+              value={nombre}
             />
             <p className="text-red-500 mt-2 text-sm" hidden={nameAlert}>
               El nombre es obligatorio *
@@ -108,6 +150,7 @@ export const Contact = () => {
               onChange={(e) => setEmail(e.target.value)}
               id="correo"
               placeholder="Tu email"
+              value={email}
             />
             <p className="text-red-500 mt-2 text-sm" hidden={emailAlert}>
               El email es obligatorio *
@@ -128,6 +171,7 @@ export const Contact = () => {
             onChange={(e) => setAsunto(e.target.value)}
             id="asunto"
             placeholder="Motivo del email"
+            value={asunto}
           />
           <p className="text-red-500 mt-2 text-sm" hidden={subjectAlert}>
             El asunto es obligatorio *
@@ -147,6 +191,7 @@ export const Contact = () => {
             cols={30}
             rows={10}
             placeholder="Deja tu mensaje aquí..."
+            value={mensaje}
             onChange={(e) => setMensaje(e.target.value)}
           ></textarea>
           <p className="text-red-500 mt-2 text-sm" hidden={messageAlert}>
@@ -154,6 +199,21 @@ export const Contact = () => {
           </p>
         </div>
         <div className="text-white font-semibold">
+          {alertMessage.msg !== "" && (
+            <div className="pt-6 font-extrabold animate-jump-in animate-once">
+              <Alert
+                severity={alertMessage.type === "error" ? "error" : "success"}
+              >
+                {alertMessage.msg}
+              </Alert>
+            </div>
+          )}
+          <div className="sk-folding-cube" hidden={spinner}>
+            <div className="sk-cube1 sk-cube"></div>
+            <div className="sk-cube2 sk-cube"></div>
+            <div className="sk-cube4 sk-cube"></div>
+            <div className="sk-cube3 sk-cube"></div>
+          </div>
           <button
             className="text-left w-full md:w-auto relative rounded bg-gradient-to-br from-sky-600 to-red-500 hover:from-cyan-500 hover:to-yellow-600 hover:text-white dark:text-white px-10 mt-6 py-3 flex items-center justify-center disabled:opacity-20 disabled:cursor-default disabled:hover:from-sky-600 disabled:hover:to-red-500"
             type="submit"

@@ -12,7 +12,7 @@ const Main = () => {
                 Julián Roa Palacio
               </span>
             </h1>
-            <div className="text-4xl md:text-5xl mt-5 font-semibold text-center md:text-left h-28 leading-snug md:mt-4">
+            <div className="text-4xl md:text-5xl mt-5 font-semibold text-center md:text-left h-28 leading-snug md:mt-4 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">
               <Typewriter
                 words={["Ingeniero de Sistemas", "Desarrollador Web"]}
                 delay={80}

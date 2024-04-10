@@ -19,6 +19,31 @@ const Header = () => {
 
   const opacity = scrollPos > 10 ? Math.min(scrollPos / 100, 0.95) : 0;
 
+  const leer = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // Para prevenir la acción predeterminada del enlace
+    const target = e.target as HTMLAnchorElement;
+    const textoEnlace = target.dataset.id;
+    const section = document.getElementById(textoEnlace!);
+  
+    if (section) {
+      // Obtener la altura del nav
+      const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+  
+      // Calcular la posición de desplazamiento teniendo en cuenta la altura del nav
+      const offsetTop = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+  
+      // Hacer scroll hasta la posición corregida
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
+      });
+  
+      // Ocultar la barra de navegación
+      setVisibleNav(false);
+    }
+  };
+  
+
   return (
     <header
       className={`z-50 shadow-sky-600 sticky top-0 w-full lg:transition lg:duration-600 lg:ease-in-out lg:animate-fade-down lg:animate-once lg:animate-normal ${
@@ -56,6 +81,8 @@ const Header = () => {
           <a
             href="#"
             className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            onClick={(e) => leer(e)}
+            data-id="sobremi"
           >
             <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Sobre Mí
@@ -63,6 +90,8 @@ const Header = () => {
           <a
             href="#"
             className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            onClick={(e) => leer(e)}
+            data-id="habilidades"
           >
             <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Habilidades
@@ -70,6 +99,8 @@ const Header = () => {
           <a
             href="#"
             className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            onClick={(e) => leer(e)}
+            data-id="proyectos"
           >
             <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Proyectos
@@ -77,6 +108,8 @@ const Header = () => {
           <a
             href="#"
             className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            onClick={(e) => leer(e)}
+            data-id="contacto"
           >
             <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Contacto
