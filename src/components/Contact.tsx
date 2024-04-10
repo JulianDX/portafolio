@@ -94,7 +94,6 @@ export const Contact = () => {
       });
       if (request.isAxiosError(error) && error.response) {
         setAlertMessage({ msg: "Hubo un error enviando el correo", type: "error" });
-        setCanSend(true);
         setSpinner(true);
       }
     }

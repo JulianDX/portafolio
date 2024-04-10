@@ -30,7 +30,7 @@ const Main = () => {
               </a>
               <a
                 href="https://github.com/JulianDX"
-                target="blank"
+                target="_blank"
                 type="button"
                 className="text-gray-100 h-full bg-[#404954] hover:text-[#404954] hover:bg-gray-100 font-bold rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center  me-2 mb-2 transition-colors ease-in-out duration-300"
               >

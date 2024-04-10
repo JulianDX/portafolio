@@ -99,7 +99,7 @@ export const projects: projectType[] = [
   },
   {
     nombre: "portafolio",
-    url: "",
+    url: "#",
     repositorio: "https://github.com/JulianDX/portafolio",
     descripcion:
       "Si te da curiosidad ver cómo está construido mi portafolio:",

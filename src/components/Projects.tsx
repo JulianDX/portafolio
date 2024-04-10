@@ -23,7 +23,7 @@ export const Projects = () => {
                 key={project.url}
                 className="bg-black bg-opacity-50 rounded-xl hover:scale-101 transition ease-linear"
               >
-                <a href={project.url} target="blank">
+                <a href={project.url} target="_blank">
                   <img
                     className="rounded-xl max-w-80 w-full mx-auto -mt-5"
                     src={`/img/${project.nombre}.webp`}
@@ -63,7 +63,7 @@ export const Projects = () => {
                   <div>
                     <a
                       href={project.repositorio}
-                      target="blank"
+                      target="_blank"
                       className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-md group bg-gradient-to-br from-purple-600 to-blue-500 hover:to-orange-400 hover:text-white dark:text-white"
                     >
                       <svg
@@ -87,7 +87,7 @@ export const Projects = () => {
                   {project.nombre !== "portafolio" && (
                     <a
                       href={project.url}
-                      target="blank"
+                      target="_blank"
                       className="text-left w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 text-sm font-medium text-white rounded-md bg-gradient-to-br from-purple-500 to-pink-500 hover:to-teal-300 hover:text-white"
                     >
                       <span className="font-bold w-full h-full px-5 py-2.5">
