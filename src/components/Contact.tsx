@@ -93,7 +93,7 @@ export const Contact = () => {
         behavior: "smooth",
       });
       if (request.isAxiosError(error) && error.response) {
-        setAlertMessage({ msg: (error.response?.data).error, type: "error" });
+        setAlertMessage({ msg: "Hubo un error enviando el correo", type: "error" });
         setCanSend(true);
         setSpinner(true);
       }
