@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
   const [scrollPos, setScrollPos] = useState(0);
@@ -54,13 +53,13 @@ const Header = () => {
       <div className="flex flex-col lg:flex-row justify-between items-end md:items-center max-w-6xl mx-auto px-2">
         {/* Logo */}
         <div className="flex justify-between w-full md:w-auto items-center p-4">
-          <h1
+          <p
             className="text-white text-2xl font-extrabold cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             {`<`}
             <span>Julián Dev</span> {`/>`}
-          </h1>
+          </p>
           <img
             className="max-w-9 md:hidden"
             src="/img/barras.svg"
@@ -91,6 +90,15 @@ const Header = () => {
             href="#"
             className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
             onClick={(e) => leer(e)}
+            data-id="estudios"
+          >
+            <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
+            Estudios
+          </a>
+          <a
+            href="#"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            onClick={(e) => leer(e)}
             data-id="habilidades"
           >
             <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
@@ -113,14 +121,6 @@ const Header = () => {
           >
             <span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-white transition-all duration-300 group-hover:w-full"></span>
             Contacto
-          </a>
-          <a
-            href="files/CV.pdf"
-            download="CV_Julian_Roa.pdf"
-            className="flex group gap-2 items-center relative overflow-hidden bg-white text-center hover:scale-105 text-black hover:bg-gray-200 text-lg font-semibold rounded px-2 h-10 transition ease-linear mr-4 lg:mr-0 md:mr-0"
-          >
-            Descargar CV
-            <ArrowDownTrayIcon className="h-6 w-6" />
           </a>
         </nav>
       </div>

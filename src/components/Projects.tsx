@@ -26,7 +26,7 @@ export const Projects = () => {
                 <a href={project.url} target="blank">
                   <img
                     className="rounded-xl max-w-80 w-full mx-auto -mt-5"
-                    src={`/img/${project.nombre}.jpg`}
+                    src={`/img/${project.nombre}.webp`}
                     alt={project.nombre}
                     loading="lazy"
                     width={300}

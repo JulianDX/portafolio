@@ -12,10 +12,10 @@ export const About = () => {
         </div>
         <div className="col-span-2 text-xl font-semibold">
           <p>
-            <span className="bg-gradient-to-l from-cyan-200 to-blue-500 text-transparent bg-clip-text">Nombre Completo:</span> Julián Fernando Roa Palacio
+            <span className="bg-gradient-to-l from-cyan-200 to-blue-400 text-transparent bg-clip-text">Nombre Completo:</span> Julián Fernando Roa Palacio
           </p>
           <p className="mt-2">
-            <span className="bg-gradient-to-l from-cyan-200 to-blue-500 text-transparent bg-clip-text">País:</span> Colombia{" "}
+            <span className="bg-gradient-to-l from-cyan-200 to-blue-400 text-transparent bg-clip-text">País:</span> Colombia{" "}
             <span className="rounded fi fi-co"></span>
           </p>
           <br />

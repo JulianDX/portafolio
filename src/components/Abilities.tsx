@@ -8,7 +8,7 @@ export const Abilities = () => {
       <div className="grid md:grid-cols-2 p-8 items-center gap-8">
         <div className="text-white text-4xl text-center">
           <h2 className="bg-gradient-to-r font-extrabold from-green-300 to-orange-400 text-transparent bg-clip-text text-center md:text-left">
-            Habilidades Blandas
+            Valoro las habilidades blandas tanto como las técnicas
           </h2>
         </div>
         <div className="p-2">
@@ -27,9 +27,9 @@ export const Abilities = () => {
         </div>
       </div>
       <div className="grid md:grid-cols-2 p-8 items-center gap-8">
-        <div className="text-white text-4xl text-center">
+        <div className="text-white text-4xl text-center md:order-2">
           <h2 className="bg-gradient-to-r font-extrabold from-purple-300 to-pink-400 text-transparent bg-clip-text text-center md:text-left">
-            Tecnologías que he utilizado
+            Tecnologías que he empleado en diversos proyectos
           </h2>
         </div>
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 justify-items-center items-center p-2 gap-5">

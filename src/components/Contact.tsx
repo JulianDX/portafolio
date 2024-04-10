@@ -79,7 +79,7 @@ export const Contact = () => {
         behavior: "smooth",
       });
       setCanSend(false);
-      const peticion = await axios.post("http://localhost:4000/contact", {
+      const peticion = await axios.post(`${import.meta.env.VITE_BACKEND_URL}`, {
         nombre,
         email,
         mensaje,
@@ -108,11 +108,12 @@ export const Contact = () => {
   return (
     <section
       id="contacto"
-      className="max-w-xl md:max-w-2xl mx-auto pb-10 px-4 bg-black p-8 bg-opacity-60 rounded-lg"
+      className="max-w-xl md:max-w-2xl mx-auto p-10 bg-black bg-opacity-60 rounded-lg"
     >
       <h2 className="text-white text-4xl text-center">Contacto</h2>
       <p className="text-white text-center mt-2">
-        Llena el formulario para ponernos en contacto
+        Envíame un correo llenando el siguiente formulario si estás interesado
+        en colaborar o si tienes alguna idea en mente.
       </p>
       <form className="py-4" onSubmit={(e) => handleSubmit(e)}>
         <div className="md:grid md:grid-cols-2 md:gap-5">
