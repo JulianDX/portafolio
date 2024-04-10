@@ -1,3 +1,4 @@
+import axios from "axios";
 import request from "axios";
 import { useEffect, useState } from "react";
 import { FormEvent } from "react";
@@ -78,6 +79,12 @@ export const Contact = () => {
         behavior: "smooth",
       });
       setCanSend(false);
+      const peticion = await axios.post(`${import.meta.env.VITE_BACKEND_URL}`, {
+        nombre,
+        email,
+        mensaje,
+        asunto,
+      });
       console.log("Test")
       setSpinner(true);
     } catch (error) {
