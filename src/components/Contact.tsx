@@ -92,17 +92,9 @@ export const Contact = () => {
       setSpinner(true);
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: "smooth",
-        });
-        if (request.isAxiosError(error) && error.response) {
-          setAlertMessage({
-            msg: error.response.data,
-            type: "error",
-          });
-          setSpinner(true);
-        }
+        console.log(error.status);
+        console.error(error.response?.data);
+        // Do something with this error...
       } else {
         console.error(error);
       }
