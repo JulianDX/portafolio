@@ -27,7 +27,7 @@ export const Studies = () => {
           <li className="md:flex items-start gap-4 -ml-3">
             <span className="block bg-white h-5 w-5 rounded-full"></span>
             <div className="ml-8 -mt-6 md:-mt-0 md:ml-0">
-              <p className="text-3xl font-bold mb-2 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">JavaScript Moderno</p>
+              <p className="text-3xl font-bold mb-2 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">Curso JavaScript Moderno</p>
               <p className="text-lg">Instructor: Juan Pablo de la Torre</p>
               <p className="text-lg">Plataforma: Udemy</p>
               <p className="text-lg">2024</p>
