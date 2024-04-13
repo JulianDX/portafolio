@@ -222,7 +222,7 @@ export const Contact = () => {
             <div className="sk-cube3 sk-cube"></div>
           </div>
           <button
-            className="text-left w-full md:w-auto relative rounded bg-gradient-to-br from-sky-600 to-red-500 hover:from-cyan-500 hover:to-yellow-600 hover:text-white dark:text-white px-10 mt-6 py-3 flex items-center justify-center disabled:opacity-20 disabled:cursor-default disabled:hover:from-sky-600 disabled:hover:to-red-500"
+            className="text-left w-full md:w-auto relative rounded bg-gradient-to-br from-sky-600 to-red-500 hover:from-cyan-500 hover:to-yellow-600 hover:text-white dark:text-white px-10 mt-6 py-3 flex items-center justify-center disabled:opacity-40 disabled:hover:cursor-not-allowed disabled:cursor-default disabled:hover:from-sky-600 disabled:hover:to-red-500"
             type="submit"
             disabled={!canSend}
           >
