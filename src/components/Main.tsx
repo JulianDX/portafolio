@@ -21,8 +21,8 @@ const Main = () => {
             </div>
             <div className="flex flex-col justify-center md:grid md:grid-cols-2 gap-4 mx-auto mb-4">
               <a
-                href="files/CVJulianRoa.pdf"
-                download="CVJulianRoa.pdf"
+                href="files/CVJulianRoaPalacio.pdf"
+                download="CVJulianRoaPalacio.pdf"
                 className="text-[#404954] h-full bg-gray-100 hover:text-white hover:bg-[#404954] font-bold rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center  me-2 mb-2 transition-colors ease-in-out duration-300"
               >
                 <ArrowDownTrayIcon className="inline-block h-6 w-6 mr-2" />
