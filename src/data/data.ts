@@ -86,6 +86,18 @@ export const projects: projectType[] = [
     ],
   },
   {
+    nombre: "gastos",
+    url: "https://swipe-gastos.netlify.app/",
+    repositorio: "https://github.com/JulianDX/control-gastos",
+    descripcion:
+      "Aplicación Web para llevar control de gastos y presupuesto.",
+    tecnologias: [
+      { nombre: "react", color: "gray" },
+      { nombre: "tailwind", color: "violet" },
+      { nombre: "typescript", color: "emerald" },
+    ],
+  },
+  {
     nombre: "agencia",
     url: "https://agenciaviajes-3dq7.onrender.com/",
     repositorio: "https://github.com/JulianDX/agenciaviajes",

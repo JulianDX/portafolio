@@ -16,7 +16,7 @@ export const Projects = () => {
       <hr hidden className="bg-orange-700 text-orange-100 shadow-orange-400" />
       <h2 className="text-white text-4xl text-center my-5 pb-3">Proyectos</h2>
       <section className="pb-10 bg-white rounded-xl bg-opacity-15 border-solid p-4 border-white border-2">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10">
           {projects.map((project) => {
             return (
               <div
