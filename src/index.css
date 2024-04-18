@@ -10,12 +10,11 @@
 body {
     background-image: url("bgvector.svg");
     background-attachment: fixed;
-    background-size: cover;
     background-repeat: no-repeat;
-    transition: height 1000000s ease;
-    -webkit-transition: height 1000000s ease;
-    -moz-transition: height 1000000s ease;
-    -o-transition: height 1000000s ease;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 @layer base {
