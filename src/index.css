@@ -13,6 +13,11 @@
         font-weight: 400;
         font-style: normal;
         font-display: swap;
+        background-color: black;
+        background-image: url("img/bgvector.svg");
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .sk-folding-cube {

@@ -3,9 +3,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        pattern: "url('/img/bgvector.svg')", // Adjust the path as needed
-      },
       letterSpacing: {
         puntoCinco: ".5px",
       },
