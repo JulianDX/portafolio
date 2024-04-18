@@ -7,12 +7,15 @@
     src: url('/fonts/Poppins-Medium.ttf') format('woff2'),
 }
 
-body{
+body {
     background-image: url("bgvector.svg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    transition: height 1000000s ease;
+    -webkit-transition: height 1000000s ease;
+    -moz-transition: height 1000000s ease;
+    -o-transition: height 1000000s ease;
 }
 
 @layer base {
