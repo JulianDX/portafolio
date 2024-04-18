@@ -7,6 +7,13 @@
     src: url('/fonts/Poppins-Medium.ttf') format('woff2'),
 }
 
+body{
+    background-image: url("img/bgvector.svg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 @layer base {
     html {
         font-family: "Poppins", sans-serif;
@@ -14,10 +21,6 @@
         font-style: normal;
         font-display: swap;
         background-color: black;
-        background-image: url("img/bgvector.svg");
-        background-attachment: fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .sk-folding-cube {
