@@ -9,9 +9,11 @@
 
 body{
     background-image: url("bgvector.svg");
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
 }
 
 @layer base {
