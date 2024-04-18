@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: url("img/bgvector.svg");
+    background-image: url("bgvector.svg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
