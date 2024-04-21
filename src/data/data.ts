@@ -90,7 +90,7 @@ export const projects: projectType[] = [
     url: "https://drinkapireact.netlify.app/",
     repositorio: "https://github.com/JulianDX/bebidas-api-zustand-zod",
     descripcion:
-      "Aplicación Web para consultar API de bebidas y guardarlas las favoritas",
+      "Aplicación Web para consultar API y almacenar favoritos.",
     tecnologias: [
       { nombre: "react", color: "gray" },
       { nombre: "tailwind", color: "violet" },
