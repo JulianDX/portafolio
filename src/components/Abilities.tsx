@@ -15,12 +15,17 @@ export const Abilities = () => {
           <ul className="text-white grid lg:grid-cols-2 gap-4 font-semibold">
             {blandas.map((blanda) => {
               return (
-                <li
-                  key={blanda.habilidad}
-                  className="text-center lg:text-left bg-gray-400 bg-opacity-15 md:bg-opacity-25 rounded-lg p-3 border-b-4 border-white hover:border-pink-500 hover:bg-gray-100 hover:text-black transition-colors ease-linear duration-300"
-                >
-                  {blanda.habilidad}
-                </li>
+                <div key={blanda.habilidad} className="wrapper">
+                  <div
+                    className="mx-auto w-full items-center justify-center"
+                  >
+                    <div className="h-12 w-full rounded-md bg-transparent p-1">
+                      <div className="flex h-full w-full items-center justify-center bg-gray-800 hover:bg-transparent transition-colors duration-100 back">
+                        {blanda.habilidad}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               );
             })}
           </ul>
