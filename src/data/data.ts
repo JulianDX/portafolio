@@ -86,11 +86,22 @@ export const projects: projectType[] = [
     ],
   },
   {
+    nombre: "bebidas",
+    url: "https://drinkapireact.netlify.app/",
+    repositorio: "https://github.com/JulianDX/bebidas-api-zustand-zod",
+    descripcion:
+      "Aplicación Web para consultar API de bebidas y guardarlas las favoritas",
+    tecnologias: [
+      { nombre: "react", color: "gray" },
+      { nombre: "tailwind", color: "violet" },
+      { nombre: "typescript", color: "emerald" },
+    ],
+  },
+  {
     nombre: "gastos",
     url: "https://swipe-gastos.netlify.app/",
     repositorio: "https://github.com/JulianDX/control-gastos",
-    descripcion:
-      "Aplicación Web para llevar control de gastos y presupuesto.",
+    descripcion: "Aplicación Web para llevar control de gastos y presupuesto.",
     tecnologias: [
       { nombre: "react", color: "gray" },
       { nombre: "tailwind", color: "violet" },
