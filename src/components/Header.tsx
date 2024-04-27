@@ -1,8 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
   const [scrollPos, setScrollPos] = useState(0);
   const [visibleNav, setVisibleNav] = useState(false);
+  const headerRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Usa headerRef.current como HTMLHeadingElement
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        setVisibleNav(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,28 +38,29 @@ const Header = () => {
     const target = e.target as HTMLAnchorElement;
     const textoEnlace = target.dataset.id;
     const section = document.getElementById(textoEnlace!);
-  
+
     if (section) {
       // Obtener la altura del nav
-      const navHeight = document.querySelector('nav')?.offsetHeight || 0;
-  
+      const navHeight = document.querySelector("nav")?.offsetHeight || 0;
+
       // Calcular la posición de desplazamiento teniendo en cuenta la altura del nav
-      const offsetTop = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
-  
+      const offsetTop =
+        section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
       // Hacer scroll hasta la posición corregida
       window.scrollTo({
         top: offsetTop,
-        behavior: "smooth"
+        behavior: "smooth",
       });
-  
+
       // Ocultar la barra de navegación
       setVisibleNav(false);
     }
   };
-  
 
   return (
     <header
+      ref={headerRef}
       className={`z-50 shadow-sky-600 sticky top-0 w-full lg:transition lg:duration-600 lg:ease-in-out lg:animate-fade-down lg:animate-once lg:animate-normal ${
         scrollPos > 100 ? "shadow-md" : "bg-transparent"
       }`}
