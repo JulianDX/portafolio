@@ -60,7 +60,7 @@ const Main = () => {
         </div>
         <div className="col-span-1 flex justify-center items-center">
           <img
-            className="max-w-52 md:max-w-full h-auto rounded-full box mt-7"
+            className="w-auto h-auto rounded-full box mt-7"
             src="img/j.webp"
             alt="Imagen perfil"
             width={351}

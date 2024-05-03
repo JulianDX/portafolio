@@ -26,7 +26,7 @@ export const Studies = () => {
       <div
         ref={contentStudies}
         className={`p-8 ${
-          inViewContentStudies && "lg:animate-fade-right animate-delay-500"
+          inViewContentStudies && "lg:animate-fade-right lg:animate-delay-500"
         }`}
       >
         <ul
