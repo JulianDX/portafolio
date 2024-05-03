@@ -38,7 +38,7 @@ export const Abilities = () => {
           <ul className="text-white grid lg:grid-cols-2 gap-4 font-semibold">
             {blandas.map((blanda) => {
               return (
-                <div key={blanda.habilidad} className="wrapper">
+                <li key={blanda.habilidad} className="wrapper">
                   <div className="mx-auto w-full items-center justify-center">
                     <div className="h-12 w-full rounded-md bg-transparent p-1">
                       <div className="flex h-full w-full items-center justify-center bg-gray-800 hover:bg-transparent transition-colors duration-100 back">
@@ -46,7 +46,7 @@ export const Abilities = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </li>
               );
             })}
           </ul>
