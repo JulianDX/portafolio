@@ -16,23 +16,25 @@
         background-color: black;
     }
 
-    .box {
-        display: grid;
-        place-content: center;
-        color: white;
-        --border-angle: 0turn;
-        --main-bg: conic-gradient(from var(--border-angle),
-                rgba(34, 17, 51, 0),
-                rgba(17, 17, 34, 0) 5%,
-                rgba(17, 17, 34, 0) 60%,
-                rgba(34, 17, 51, 0) 95%);
-        border: solid 5px transparent;
-        border-radius: 2em;
-        --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, rgb(0, 12, 146), rgb(0, 221, 255) 99%, transparent);
-        background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
-        background-position: center center;
-        -webkit-animation: bg-spin 4s linear infinite;
-        animation: bg-spin 4s linear infinite;
+    @media (min-width: 768px) {
+        .box {
+            display: grid;
+            place-content: center;
+            color: white;
+            --border-angle: 0turn;
+            --main-bg: conic-gradient(from var(--border-angle),
+                    rgba(34, 17, 51, 0),
+                    rgba(17, 17, 34, 0) 5%,
+                    rgba(17, 17, 34, 0) 60%,
+                    rgba(34, 17, 51, 0) 95%);
+            border: solid 5px transparent;
+            border-radius: 2em;
+            --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, rgb(0, 12, 146), rgb(0, 221, 255) 99%, transparent);
+            background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
+            background-position: center center;
+            -webkit-animation: bg-spin 4s linear infinite;
+            animation: bg-spin 4s linear infinite;
+        }
     }
 
     @-webkit-keyframes bg-spin {
