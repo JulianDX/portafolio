@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 export const Studies = () => {
   const { ref: titleStudies, inView: inViewTitle } = useInView({
     triggerOnce: true,
-    initialInView: false
+    initialInView: false,
   });
   const { ref: contentStudies, inView: inViewContentStudies } = useInView({
     triggerOnce: true,
@@ -16,8 +16,9 @@ export const Studies = () => {
     >
       <h2
         ref={titleStudies}
-        className={`text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] ${
-          inViewTitle && "animate-fade-down"
+        className={`${
+          inViewTitle &&
+          "animate-fade-down text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] "
         }`}
       >
         Estudios
@@ -28,7 +29,11 @@ export const Studies = () => {
           inViewContentStudies && "animate-fade-right animate-delay-500"
         }`}
       >
-        <ul className="border-l-4 border-l-white space-y-10">
+        <ul
+          className={`opacity-0 ${
+            inViewContentStudies && "border-l-4 border-l-white space-y-10 opacity-100"
+          } `}
+        >
           <li className="md:flex items-start gap-4 -ml-3">
             <span className="block bg-white h-5 w-5 rounded-full"></span>
             <div className="ml-8 -mt-6 md:-mt-0 md:ml-0">

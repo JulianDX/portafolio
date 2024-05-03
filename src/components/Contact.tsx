@@ -126,15 +126,16 @@ export const Contact = () => {
     >
       <h2
         ref={titleContact}
-        className={`text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(189,0,255,1)] ${
-          inViewTitle && "animate-fade-down animate-delay-300"
+        className={` ${
+          inViewTitle &&
+          "animate-fade-down animate-delay-300 text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(189,0,255,1)]"
         }`}
       >
         Contacto
       </h2>
       <div
         ref={contentContact}
-        className={`${inViewContent && "animate-fade animate-delay-500"}`}
+        className={`opacity-0 ${inViewContent && "animate-fade animate-delay-700"}`}
       >
         <p className="text-white text-center mt-4 mb-5">
           Envíame un correo llenando el siguiente formulario si estás interesado

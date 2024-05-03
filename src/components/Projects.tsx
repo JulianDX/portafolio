@@ -24,7 +24,7 @@ export const Projects = () => {
       <hr hidden className="bg-orange-700 text-orange-100 shadow-orange-400" />
       <h2
         ref={titleProjects}
-        className={`text-white text-4xl text-center my-5 pb-3 drop-shadow-[0_2.2px_2.2px_rgba(54,255,0,1)] ${
+        className={`opacity-0 text-white text-4xl text-center my-5 pb-3 drop-shadow-[0_2.2px_2.2px_rgba(54,255,0,1)] ${
           inViewTitle && "animate-fade animate-delay-200"
         }`}
       >
@@ -33,8 +33,8 @@ export const Projects = () => {
       <section className="pb-10 bg-white rounded-xl bg-opacity-15 border-solid p-4 border-white border-2">
         <div
           ref={compProjects}
-          className={`grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10 ${
-            inViewProjects && "animate-fade-down animate-delay-500"
+          className={`opacity-0 grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10 ${
+            inViewProjects && "animate-fade-down animate-delay-300"
           }`}
         >
           {projects.map((project) => {

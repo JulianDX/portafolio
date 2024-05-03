@@ -17,15 +17,15 @@ export const Abilities = () => {
     <section id="habilidades" className="max-w-xl md:max-w-5xl mx-auto pt-10">
       <h2
         ref={titleAbilities}
-        className={`text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)] ${
-          inViewTitle && "animate-fade-up"
+        className={` ${
+          inViewTitle && "animate-fade-up text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)]"
         }`}
       >
         Habilidades
       </h2>
       <div
         ref={contentA1}
-        className={`grid md:grid-cols-2 p-8 items-center gap-8 ${
+        className={`opacity-0 grid md:grid-cols-2 p-8 items-center gap-8 ${
           inViewContent1 && "animate-fade-right animate-delay-300"
         }`}
       >
@@ -54,7 +54,7 @@ export const Abilities = () => {
       </div>
       <div
         ref={contentA2}
-        className={`grid md:grid-cols-2 p-8 items-center gap-8 ${
+        className={`opacity-0 grid md:grid-cols-2 p-8 items-center gap-8 ${
           inViewContent2 && "animate-fade-left animate-delay-500"
         }`}
       >
