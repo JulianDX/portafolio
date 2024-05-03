@@ -4,7 +4,7 @@ import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 const Main = () => {
   return (
     <>
-      <main className="text-white max-w-7xl mx-auto md:p-10 md:grid md:grid-cols-3 mt-5 gap-0 lg:animate-fade-left lg:animate-once lg:animate-ease-in lg:animate-normal">
+      <main className="text-white max-w-7xl mx-auto md:p-10 md:grid md:grid-cols-3 mt-5 gap-0 animate-fade-left animate-once animate-ease-in animate-normal">
         <div className="md:col-span-2 md:flex items-center px-4">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-center md:text-left drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)]">
@@ -60,7 +60,7 @@ const Main = () => {
         </div>
         <div className="col-span-1 flex justify-center items-center">
           <img
-            className="max-w-52 md:max-w-full w-auto h-auto rounded-full box mt-7"
+            className="max-w-52 md:max-w-full h-auto rounded-full box mt-7"
             src="img/j.webp"
             alt="Imagen perfil"
             width={351}

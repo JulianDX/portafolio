@@ -18,7 +18,7 @@ export const Abilities = () => {
       <h2
         ref={titleAbilities}
         className={` ${
-          inViewTitle && "lg:animate-fade-up text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)]"
+          inViewTitle && "animate-fade-up text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)]"
         }`}
       >
         Habilidades
@@ -26,7 +26,7 @@ export const Abilities = () => {
       <div
         ref={contentA1}
         className={`opacity-0 grid md:grid-cols-2 p-8 items-center gap-8 ${
-          inViewContent1 && "lg:animate-fade-right lg:animate-delay-300 opacity-100"
+          inViewContent1 && "animate-fade-right animate-delay-300"
         }`}
       >
         <div className="text-white text-4xl text-center">
@@ -55,7 +55,7 @@ export const Abilities = () => {
       <div
         ref={contentA2}
         className={`opacity-0 grid md:grid-cols-2 p-8 items-center gap-8 ${
-          inViewContent2 && "lg:animate-fade-left lg:animate-delay-500 opacity-100"
+          inViewContent2 && "animate-fade-left animate-delay-500"
         }`}
       >
         <div className="text-white text-4xl text-center md:order-2">

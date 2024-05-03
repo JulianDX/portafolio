@@ -25,7 +25,7 @@ export const Projects = () => {
       <h2
         ref={titleProjects}
         className={`opacity-0 text-white text-4xl text-center my-5 pb-3 drop-shadow-[0_2.2px_2.2px_rgba(54,255,0,1)] ${
-          inViewTitle && "lg:animate-fade lg:animate-delay-200 opacity-100"
+          inViewTitle && "animate-fade animate-delay-200"
         }`}
       >
         Proyectos
@@ -34,7 +34,7 @@ export const Projects = () => {
         <div
           ref={compProjects}
           className={`opacity-0 grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10 ${
-            inViewProjects && "lg:animate-fade-down lg:animate-delay-300 opacity-100"
+            inViewProjects && "animate-fade-down animate-delay-300"
           }`}
         >
           {projects.map((project) => {
