@@ -61,7 +61,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`z-50 shadow-sky-600 sticky top-0 w-full lg:transition lg:duration-600 lg:ease-in-out animate-fade-down animate-once animate-normal ${
+      className={`z-50 shadow-sky-600 sticky top-0 w-full lg:transition lg:duration-600 lg:ease-in-out md:animate-fade-down md:animate-once md:animate-normal ${
         scrollPos > 100 ? "shadow-md" : "bg-transparent"
       }`}
       style={{ backgroundColor: `rgba(0, 16, 50, ${opacity})` }}

@@ -18,7 +18,7 @@ export const Studies = () => {
         ref={titleStudies}
         className={`${
           inViewTitle &&
-          "animate-fade-down text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] "
+          "md:animate-fade-down text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] "
         }`}
       >
         Estudios
@@ -26,7 +26,7 @@ export const Studies = () => {
       <div
         ref={contentStudies}
         className={`p-8 ${
-          inViewContentStudies && "animate-fade-right animate-delay-500"
+          inViewContentStudies && "md:animate-fade-right md:animate-delay-500"
         }`}
       >
         <ul

@@ -4,7 +4,7 @@ export const About = () => {
   return (
     <section
       id="sobremi"
-      className="px-2 lg:animate-fade-up lg:animate-once lg:animate-ease-in lg:animate-normal mt-5"
+      className="px-2 md:animate-fade-up md:animate-once md:animate-ease-in md:animate-normal mt-5"
     >
       <div className="rounded-lg bg-black bg-opacity-40 max-w-4xl mx-auto p-6 md:p-8 text-white gap-5 md:shadow-[5px_5px_0px_0px_rgba(96,165,250)] border-2 border-blue-400">
         <div className="opacity-100">
