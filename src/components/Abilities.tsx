@@ -1,11 +1,34 @@
+import { useInView } from "react-intersection-observer";
 import { blandas } from "../data/data";
 import { duras } from "../data/data";
 
 export const Abilities = () => {
+  const { ref: titleAbilities, inView: inViewTitle } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: contentA1, inView: inViewContent1 } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: contentA2, inView: inViewContent2 } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section id="habilidades" className="max-w-xl md:max-w-5xl mx-auto pt-10">
-      <h2 className="text-white text-4xl text-center">Habilidades</h2>
-      <div className="grid md:grid-cols-2 p-8 items-center gap-8">
+      <h2
+        ref={titleAbilities}
+        className={`text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)] ${
+          inViewTitle && "animate-fade-up"
+        }`}
+      >
+        Habilidades
+      </h2>
+      <div
+        ref={contentA1}
+        className={`grid md:grid-cols-2 p-8 items-center gap-8 ${
+          inViewContent1 && "animate-fade-right animate-delay-300"
+        }`}
+      >
         <div className="text-white text-4xl text-center">
           <h2 className="bg-gradient-to-r font-extrabold from-green-300 to-orange-400 text-transparent bg-clip-text text-center md:text-left">
             Valoro las habilidades blandas tanto como las técnicas
@@ -16,9 +39,7 @@ export const Abilities = () => {
             {blandas.map((blanda) => {
               return (
                 <div key={blanda.habilidad} className="wrapper">
-                  <div
-                    className="mx-auto w-full items-center justify-center"
-                  >
+                  <div className="mx-auto w-full items-center justify-center">
                     <div className="h-12 w-full rounded-md bg-transparent p-1">
                       <div className="flex h-full w-full items-center justify-center bg-gray-800 hover:bg-transparent transition-colors duration-100 back">
                         {blanda.habilidad}
@@ -31,7 +52,12 @@ export const Abilities = () => {
           </ul>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 p-8 items-center gap-8">
+      <div
+        ref={contentA2}
+        className={`grid md:grid-cols-2 p-8 items-center gap-8 ${
+          inViewContent2 && "animate-fade-left animate-delay-500"
+        }`}
+      >
         <div className="text-white text-4xl text-center md:order-2">
           <h2 className="bg-gradient-to-r font-extrabold from-purple-300 to-pink-400 text-transparent bg-clip-text text-center md:text-left">
             Tecnologías que he empleado en diversos proyectos

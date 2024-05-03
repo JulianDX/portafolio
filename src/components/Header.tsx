@@ -87,7 +87,7 @@ const Header = () => {
         </div>
         {/* Navigation */}
         <nav
-          className={`flex md:items-center gap-8 flex-col md:flex-row text-right md:pb-8 lg:pb-0 transition-all duration-600 ease-in-out ${
+          className={`flex px-4 md:items-center gap-8 flex-col md:flex-row text-right md:pb-8 lg:pb-0 transition-all duration-600 ease-in-out ${
             visibleNav
               ? "h-auto opacity-100 mb-6 md:mb-0"
               : "h-0 opacity-0 md:h-auto md:opacity-100"

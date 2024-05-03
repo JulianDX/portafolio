@@ -1,6 +1,14 @@
+import { useInView } from "react-intersection-observer";
 import { projects } from "../data/data";
 
 export const Projects = () => {
+  const { ref: titleProjects, inView: inViewTitle } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: compProjects, inView: inViewProjects } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section
       id="proyectos"
@@ -14,9 +22,21 @@ export const Projects = () => {
       <hr hidden className="bg-gray-700 text-gray-100 shadow-gray-400" />
       <hr hidden className="bg-sky-700 text-sky-100 shadow-sky-400" />
       <hr hidden className="bg-orange-700 text-orange-100 shadow-orange-400" />
-      <h2 className="text-white text-4xl text-center my-5 pb-3">Proyectos</h2>
+      <h2
+        ref={titleProjects}
+        className={`text-white text-4xl text-center my-5 pb-3 drop-shadow-[0_2.2px_2.2px_rgba(54,255,0,1)] ${
+          inViewTitle && "animate-fade animate-delay-200"
+        }`}
+      >
+        Proyectos
+      </h2>
       <section className="pb-10 bg-white rounded-xl bg-opacity-15 border-solid p-4 border-white border-2">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10">
+        <div
+          ref={compProjects}
+          className={`grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10 ${
+            inViewProjects && "animate-fade-down animate-delay-500"
+          }`}
+        >
           {projects.map((project) => {
             return (
               <div
@@ -25,7 +45,7 @@ export const Projects = () => {
               >
                 <a href={project.url} target="_blank">
                   <img
-                    className="rounded-xl max-w-80 w-full mx-auto -mt-5"
+                    className="rounded-xl max-w-80 w-full mx-auto -mt-5 transition-transform duration-300"
                     src={`/img/${project.nombre}.webp`}
                     alt={project.nombre}
                     loading="lazy"

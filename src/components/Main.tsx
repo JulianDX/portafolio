@@ -7,35 +7,39 @@ const Main = () => {
       <main className="text-white max-w-7xl mx-auto md:p-10 md:grid md:grid-cols-3 mt-5 gap-0 lg:animate-fade-left lg:animate-once lg:animate-ease-in lg:animate-normal">
         <div className="md:col-span-2 md:flex items-center px-4">
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-center md:text-left drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)]">
               Hola, soy{" "}
-              <span className="bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">
+              <span className="bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text drop-shadow-none">
                 Julián Roa Palacio
               </span>
             </h1>
-            <div className="text-4xl md:text-5xl mt-5 font-semibold text-center md:text-left h-28 lg:h-20 leading-snug md:mt-4 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">
+            <div className="text-4xl drop-shadow-[0_3.2px_3.2px_rgba(0,78,207,1)] md:text-5xl mt-5 font-semibold text-center md:text-left h-28 lg:h-20 leading-snug md:mt-4 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">
               <Typewriter
                 words={["Ingeniero de Sistemas", "Desarrollador Web"]}
                 delay={80}
               />
             </div>
-            <div className="flex flex-col justify-center md:grid md:grid-cols-2 gap-4 mx-auto mb-4">
+            <div className="flex flex-col justify-center md:grid md:grid-cols-2 gap-4 mx-automt-5">
               <a
                 href="files/CVJulianRoaPalacio.pdf"
                 download="CVJulianRoaPalacio.pdf"
-                className="text-[#404954] h-full bg-gray-100 hover:text-white hover:bg-[#404954] font-bold rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center  me-2 mb-2 transition-colors ease-in-out duration-300"
+                className="relative inline-flex items-center justify-start px-5 py-3 overflow-hidden font-bold rounded-full group"
               >
-                <ArrowDownTrayIcon className="inline-block h-6 w-6 mr-2" />
-                Descargar CV
+                <ArrowDownTrayIcon className="inline-block h-6 w-6 mr-2 group-hover:text-gray-900 z-20" />
+                <span className="w-32 h-32 rotate-45 translate-x-60 -translate-y-2 absolute left-0 top-0 bg-white opacity-[10%]"></span>
+                <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-96 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-0"></span>
+                <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
+                  Descargar CV
+                </span>
+                <span className="absolute inset-0 border-2 border-white rounded-full"></span>
               </a>
               <a
                 href="https://github.com/JulianDX"
                 target="_blank"
-                type="button"
-                className="text-gray-100 bb h-full bg-[#404954] hover:text-[#404954] hover:bg-purple-300 font-bold rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center  me-2 mb-2 transition-colors ease-in-out duration-300"
+                className="relative inline-flex items-center justify-start p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
               >
                 <svg
-                  className="w-6 h-6 me-2"
+                  className="w-6 h-6 me-2 z-10 text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -47,14 +51,16 @@ const Main = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                Ver Github
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+                <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+                <span className="relative text-white">Ver GitHub</span>
               </a>
             </div>
           </div>
         </div>
         <div className="col-span-1 flex justify-center items-center">
           <img
-            className="max-w-52 md:max-w-full h-auto rounded-full box"
+            className="max-w-52 md:max-w-full h-auto rounded-full box mt-7"
             src="img/j.jpg"
             alt="Imagen perfil"
             width={351}
