@@ -32,7 +32,7 @@ const Main = () => {
                 href="https://github.com/JulianDX"
                 target="_blank"
                 type="button"
-                className="text-gray-100 h-full bg-[#404954] hover:text-[#404954] hover:bg-gray-100 font-bold rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center  me-2 mb-2 transition-colors ease-in-out duration-300"
+                className="text-gray-100 bb h-full bg-[#404954] hover:text-[#404954] hover:bg-purple-300 font-bold rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center  me-2 mb-2 transition-colors ease-in-out duration-300"
               >
                 <svg
                   className="w-6 h-6 me-2"
@@ -52,10 +52,10 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 mx-auto">
+        <div className="col-span-1 flex justify-center items-center">
           <img
-            className="max-w-52 md:max-w-full h-auto mx-auto"
-            src="img/memoicon.webp"
+            className="max-w-52 md:max-w-full h-auto rounded-full box"
+            src="img/j.jpg"
             alt="Imagen perfil"
             width={351}
             height={251}

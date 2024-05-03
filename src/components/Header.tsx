@@ -87,7 +87,7 @@ const Header = () => {
         </div>
         {/* Navigation */}
         <nav
-          className={`flex md:items-center gap-4 flex-col md:flex-row text-right md:pb-8 lg:pb-0 transition-all duration-600 ease-in-out ${
+          className={`flex md:items-center gap-8 flex-col md:flex-row text-right md:pb-8 lg:pb-0 transition-all duration-600 ease-in-out ${
             visibleNav
               ? "h-auto opacity-100 mb-6 md:mb-0"
               : "h-0 opacity-0 md:h-auto md:opacity-100"
@@ -95,7 +95,7 @@ const Header = () => {
         >
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="sobremi"
           >
@@ -104,7 +104,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="estudios"
           >
@@ -113,7 +113,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="habilidades"
           >
@@ -122,7 +122,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="proyectos"
           >
@@ -131,7 +131,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold pr-4"
+            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="contacto"
           >
