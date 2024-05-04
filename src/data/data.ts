@@ -109,19 +109,6 @@ export const projects: projectType[] = [
     ],
   },
   {
-    nombre: "agencia",
-    url: "https://agenciaviajes-3dq7.onrender.com/",
-    repositorio: "https://github.com/JulianDX/agenciaviajes",
-    descripcion:
-      "Aplicación Web para consultar viajes y agregar testimoniales.",
-    tecnologias: [
-      { nombre: "node", color: "violet" },
-      { nombre: "express", color: "sky" },
-      { nombre: "pug", color: "orange" },
-      { nombre: "mysql", color: "gray" },
-    ],
-  },
-  {
     nombre: "portafolio",
     url: "#",
     repositorio: "https://github.com/JulianDX/portafolio",
