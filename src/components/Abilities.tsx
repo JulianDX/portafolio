@@ -18,7 +18,7 @@ export const Abilities = () => {
       <h2
         ref={titleAbilities}
         className={` ${
-          inViewTitle && "md:animate-fade-up text-white text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)]"
+          inViewTitle && "md:animate-fade-up text-gray-100 text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)]"
         }`}
       >
         Habilidades
@@ -26,16 +26,16 @@ export const Abilities = () => {
       <div
         ref={contentA1}
         className={`opacity-0 grid md:grid-cols-2 p-8 items-center gap-8 ${
-          inViewContent1 && "opacity-100 md:animate-fade-right md:animate-delay-300"
+          inViewContent1 && "opacity-100 md:animate-fade-right md:animate-delay-500"
         }`}
       >
-        <div className="text-white text-4xl text-center">
+        <div className="text-gray-100 text-4xl text-center">
           <h2 className="bg-gradient-to-r font-extrabold from-green-300 to-orange-400 text-transparent bg-clip-text text-center md:text-left">
             Valoro las habilidades blandas tanto como las técnicas
           </h2>
         </div>
         <div className="p-2">
-          <ul className="text-white grid lg:grid-cols-2 gap-4 font-semibold">
+          <ul className="text-gray-100 grid lg:grid-cols-2 gap-4 font-semibold">
             {blandas.map((blanda) => {
               return (
                 <li key={blanda.habilidad} className="wrapper">
@@ -55,10 +55,10 @@ export const Abilities = () => {
       <div
         ref={contentA2}
         className={`opacity-0 grid md:grid-cols-2 p-8 items-center gap-8 ${
-          inViewContent2 && "opacity-100 md:animate-fade-left md:animate-delay-500"
+          inViewContent2 && "opacity-100 md:animate-fade-left md:animate-delay-700"
         }`}
       >
-        <div className="text-white text-4xl text-center md:order-2">
+        <div className="text-gray-100 text-4xl text-center md:order-2">
           <h2 className="bg-gradient-to-r font-extrabold from-purple-300 to-pink-400 text-transparent bg-clip-text text-center md:text-left">
             Tecnologías que he empleado en diversos proyectos
           </h2>

@@ -70,7 +70,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex justify-between w-full md:w-auto items-center p-4">
           <p
-            className="text-white text-2xl font-extrabold cursor-pointer"
+            className="text-gray-100 text-2xl font-extrabold cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             {`<`}
@@ -95,7 +95,7 @@ const Header = () => {
         >
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
+            className="group relative inline-block overflow-hidden text-gray-100 text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="sobremi"
           >
@@ -104,7 +104,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
+            className="group relative inline-block overflow-hidden text-gray-100 text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="estudios"
           >
@@ -113,7 +113,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
+            className="group relative inline-block overflow-hidden text-gray-100 text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="habilidades"
           >
@@ -122,7 +122,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
+            className="group relative inline-block overflow-hidden text-gray-100 text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="proyectos"
           >
@@ -131,7 +131,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="group relative inline-block overflow-hidden text-white text-lg font-semibold"
+            className="group relative inline-block overflow-hidden text-gray-100 text-lg font-semibold"
             onClick={(e) => leer(e)}
             data-id="contacto"
           >

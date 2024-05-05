@@ -6,7 +6,7 @@ export const About = () => {
       id="sobremi"
       className="px-2 md:animate-fade-up md:animate-once md:animate-ease-in md:animate-normal mt-5"
     >
-      <div className="rounded-lg bg-black bg-opacity-40 max-w-4xl mx-auto p-6 md:p-8 text-white gap-5 md:shadow-[5px_5px_0px_0px_rgba(96,165,250)] border-2 border-blue-400">
+      <div className="rounded-lg bg-black bg-opacity-40 max-w-4xl mx-auto p-6 md:p-8 text-gray-100 gap-5 md:shadow-[5px_5px_0px_0px_rgba(96,165,250)] border-2 border-blue-400">
         <div className="opacity-100">
           <h2 className="items-center text-3xl font-extrabold drop-shadow-[0_2.2px_2.2px_rgba(255,0,236,0.7)]">
             Un Poco Sobre Mí...

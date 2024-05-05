@@ -24,7 +24,7 @@ export const Projects = () => {
       <hr hidden className="bg-orange-700 text-orange-100 shadow-orange-400" />
       <h2
         ref={titleProjects}
-        className={`opacity-0 text-white text-4xl text-center my-5 pb-3 drop-shadow-[0_2.2px_2.2px_rgba(54,255,0,1)] ${
+        className={`opacity-0 text-gray-100 text-4xl text-center my-5 pb-3 drop-shadow-[0_2.2px_2.2px_rgba(54,255,0,1)] ${
           inViewTitle && "opacity-100 md:animate-fade md:animate-delay-200"
         }`}
       >
@@ -53,10 +53,10 @@ export const Projects = () => {
                     height={300}
                   />
                 </a>
-                <h3 className="capitalize text-center text-white font-semibold pt-4">
+                <h3 className="capitalize text-center text-gray-100 font-semibold pt-4">
                   {project.nombre}
                 </h3>
-                <p className="p-3 font-normal text-white">
+                <p className="p-3 font-normal text-gray-100">
                   {project.descripcion}
                 </p>
                 <div className="grid grid-cols-2 gap-4 p-3 pt-2">
@@ -84,7 +84,7 @@ export const Projects = () => {
                     <a
                       href={project.repositorio}
                       target="_blank"
-                      className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-white rounded-md group bg-gradient-to-br from-purple-600 to-blue-500 hover:to-orange-400 hover:text-white dark:text-white"
+                      className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-100 rounded-md group bg-gradient-to-br from-purple-600 to-blue-500 hover:to-orange-400 hover:text-gray-100 dark:text-gray-100"
                     >
                       <svg
                         className="w-7 h-7 ml-2"
@@ -108,7 +108,7 @@ export const Projects = () => {
                     <a
                       href={project.url}
                       target="_blank"
-                      className="text-left w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 text-sm font-medium text-white rounded-md bg-gradient-to-br from-purple-500 to-pink-500 hover:to-teal-300 hover:text-white"
+                      className="text-left w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 text-sm font-medium text-gray-100 rounded-md bg-gradient-to-br from-purple-500 to-pink-500 hover:to-teal-300 hover:text-gray-100"
                     >
                       <span className="font-bold w-full h-full px-5 py-2.5">
                         Demo
