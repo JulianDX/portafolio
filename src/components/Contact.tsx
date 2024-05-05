@@ -55,7 +55,7 @@ export const Contact = () => {
 
   useEffect(() => {
     if (mounted) {
-      mensaje === "" || mensaje.length <= 6
+      mensaje === "" || mensaje.length <= 30
         ? setMessageAlert(false)
         : setMessageAlert(true);
     } else {
@@ -64,7 +64,7 @@ export const Contact = () => {
   }, [mensaje]);
 
   useEffect(() => {
-    ![nombre, email, asunto, mensaje].includes("") && mensaje.length > 6
+    ![nombre, email, asunto, mensaje].includes("") && mensaje.length > 30
       ? setCanSend(true)
       : setCanSend(false);
   }, [nombre, email, asunto, mensaje]);
@@ -224,7 +224,7 @@ export const Contact = () => {
               onChange={(e) => setMensaje(e.target.value)}
             ></textarea>
             <p className="text-red-500 mt-2 text-sm" hidden={messageAlert}>
-              El mensaje es obligatorio y debe tener más de 6 caracteres*
+              El mensaje es obligatorio y debe tener más de 30 caracteres*
             </p>
           </div>
           <div className="text-gray-100 font-semibold">
