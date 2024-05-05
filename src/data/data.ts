@@ -40,6 +40,9 @@ export const duras: durasType[] = [
     tecnologia: "java",
   },
   {
+    tecnologia: "php",
+  },
+  {
     tecnologia: "javascript",
   },
   {
@@ -49,19 +52,16 @@ export const duras: durasType[] = [
     tecnologia: "react",
   },
   {
+    tecnologia: "node",
+  },
+  {
     tecnologia: "mysql",
   },
   {
     tecnologia: "mongo",
   },
   {
-    tecnologia: "php",
-  },
-  {
-    tecnologia: "node",
-  },
-  {
-    tecnologia: "pug",
+    tecnologia: "postman",
   },
   {
     tecnologia: "github",
