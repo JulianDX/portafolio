@@ -79,42 +79,51 @@ export const Contact = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSpinner(false);
-    try {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth",
+    if (!canSend) {
+      setAlertMessage({
+        msg: "Formato inválido",
+        type: "error",
       });
+    } else {
+      setSpinner(false);
       setCanSend(false);
-      const peticion = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/contact`,
-        {
-          nombre,
-          email,
-          mensaje,
-          asunto,
-        }
-      );
-      setAlertMessage({ msg: peticion.data, type: "success" });
-      setSpinner(true);
-      setNombre("");
-      setEmail("");
-      setMensaje("");
-      setAsunto("");
-      setMounted(false);
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
+      try {
         window.scrollTo({
           top: document.documentElement.scrollHeight,
           behavior: "smooth",
         });
-        setAlertMessage({
-          msg: error.response?.data.msg,
-          type: "error",
-        });
+        setCanSend(false);
+        const peticion = await axios.post(
+          `${import.meta.env.VITE_BACKEND_URL}/contact`,
+          {
+            nombre,
+            email,
+            mensaje,
+            asunto,
+          }
+        );
+        setAlertMessage({ msg: peticion.data, type: "success" });
         setSpinner(true);
-      } else {
-        console.error(error);
+        setNombre("");
+        setEmail("");
+        setMensaje("");
+        setAsunto("");
+        setMounted(false);
+      } catch (error) {
+        setCanSend(true);
+        if (axios.isAxiosError(error)) {
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+          });
+          setAlertMessage({
+            msg: error.response?.data.msg,
+            type: "error",
+          });
+          setSpinner(true);
+        } else {
+          console.error(error);
+        }
       }
     }
   };
