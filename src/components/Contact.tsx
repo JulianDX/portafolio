@@ -5,6 +5,8 @@ import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { Alert } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
+const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
 export const Contact = () => {
   const { ref: titleContact, inView: inViewTitle } = useInView({
     triggerOnce: true,
@@ -31,7 +33,7 @@ export const Contact = () => {
 
   useEffect(() => {
     if (mounted) {
-      nombre === "" ? setNameAlert(false) : setNameAlert(true);
+      nombre.trim() === "" ? setNameAlert(false) : setNameAlert(true);
     } else {
       setMounted(true);
     }
@@ -39,7 +41,11 @@ export const Contact = () => {
 
   useEffect(() => {
     if (mounted) {
-      email === "" ? setEmailAlert(false) : setEmailAlert(true);
+      email.trim() === ""
+        ? setEmailAlert(false)
+        : !emailRegex.test(email)
+        ? setEmailAlert(false)
+        : setEmailAlert(true);
     } else {
       setMounted(true);
     }
@@ -47,7 +53,7 @@ export const Contact = () => {
 
   useEffect(() => {
     if (mounted) {
-      asunto === "" ? setSubjectAlert(false) : setSubjectAlert(true);
+      asunto.trim() === "" ? setSubjectAlert(false) : setSubjectAlert(true);
     } else {
       setMounted(true);
     }
@@ -55,7 +61,7 @@ export const Contact = () => {
 
   useEffect(() => {
     if (mounted) {
-      mensaje === "" || mensaje.length <= 30
+      mensaje.trim() === "" || mensaje.trim().length <= 30
         ? setMessageAlert(false)
         : setMessageAlert(true);
     } else {
@@ -64,7 +70,7 @@ export const Contact = () => {
   }, [mensaje]);
 
   useEffect(() => {
-    ![nombre, email, asunto, mensaje].includes("") && mensaje.length > 30
+    ![nombre, email, asunto, mensaje].includes("") && mensaje.trim().length > 30 && emailRegex.test(email)
       ? setCanSend(true)
       : setCanSend(false);
   }, [nombre, email, asunto, mensaje]);
@@ -191,7 +197,7 @@ export const Contact = () => {
                 value={email}
               />
               <p className="text-red-500 mt-2 text-sm" hidden={emailAlert}>
-                El email es obligatorio *
+                Dirección no válida *
               </p>
             </div>
           </div>
@@ -233,7 +239,7 @@ export const Contact = () => {
               onChange={(e) => setMensaje(e.target.value)}
             ></textarea>
             <p className="text-red-500 mt-2 text-sm" hidden={messageAlert}>
-              El mensaje es obligatorio y debe tener más de 30 caracteres*
+              {mensaje.length} / {31}
             </p>
           </div>
           <div className="text-gray-100 font-semibold">
