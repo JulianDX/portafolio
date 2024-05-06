@@ -69,8 +69,8 @@ const Main = () => {
         </div>
         <div className="col-span-1 flex flex-col gap-5 justify-start items-center py-3">
           <img
-            className="max-w-52 md:max-w-full h-auto rounded-full box"
-            src="img/j.webp"
+            className="max-w-52 md:max-w-full h-auto rounded-full box -rotate-45"
+            src="img/file.webp"
             alt="Imagen perfil"
             width={321}
             height={251}

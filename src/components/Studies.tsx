@@ -48,7 +48,7 @@ export const Studies = () => {
                 Universidad del Quindío
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Carrera: <span className="text-white">Ingeniería de Sistemas y Computación</span>
+                Carrera: <span className="text-gray-100">Ingeniería de Sistemas y Computación</span>
               </p>
               <p className="text-lg">2018-2024</p>
             </div>
@@ -67,15 +67,15 @@ export const Studies = () => {
                 Curso Desarrollo Web Completo
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Instructor: <span className="text-white drop-shadow-sm">Juan Pablo de la Torre</span>
+                Instructor: <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Plataforma: <span className="text-white drop-shadow-sm">Udemy</span>
+                Plataforma: <span className="text-gray-100">Udemy</span>
               </p>
               <p className="text-lg">2023</p>
               <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Descripción: <br />
-                <span className="text-white drop-shadow-sm">
+                <span className="text-gray-100">
                   Fundamentos del Desarrollo en tecnologías como: HTML, CSS,
                   SASS, JavaScript, Fetch, PHP, POO, MVC, SQL, MySQL y API's.
                 </span>
@@ -96,15 +96,15 @@ export const Studies = () => {
                 Curso JavaScript Moderno
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Instructor: <span className="text-white drop-shadow-sm">Juan Pablo de la Torre</span>
+                Instructor: <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Plataforma: <span className="text-white drop-shadow-sm">Udemy</span>
+                Plataforma: <span className="text-gray-100">Udemy</span>
               </p>
               <p className="text-lg">2024</p>
               <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Descripción: <br />
-                <span className="text-white drop-shadow-sm">
+                <span className="text-gray-100">
                   Fundamentos de JavaScript y temas avanzados como Prototypes,
                   Delegation, Classes, Promises, Generadores, POO, Fetch API,
                   Async Await, Async JS, Objetos, REST API's, API's nativas.
@@ -126,15 +126,15 @@ export const Studies = () => {
                 Curso React y Typescript
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Instructor: <span className="text-white drop-shadow-sm">Juan Pablo de la Torre</span>
+                Instructor: <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Plataforma: <span className="text-white drop-shadow-sm">Udemy</span>
+                Plataforma: <span className="text-gray-100">Udemy</span>
               </p>
               <p className="text-lg">2024</p>
               <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Descripción: <br />
-                <span className="text-white drop-shadow-sm">
+                <span className="text-gray-100">
                   Fundamentos de TypeScript y React: State, Hooks, State global
                   con Context y Zustand, componentes y eventos, consultar API's
                   externas y creación de API's propias.
