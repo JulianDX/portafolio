@@ -1,5 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { projects } from "../data/data";
+import { BriefcaseIcon } from "@heroicons/react/24/solid";
 
 export const Projects = () => {
   const { ref: titleProjects, inView: inViewTitle } = useInView({
@@ -10,10 +11,7 @@ export const Projects = () => {
   });
 
   return (
-    <section
-      id="proyectos"
-      className="px-2 max-w-xl md:max-w-6xl mx-auto pb-10"
-    >
+    <section id="proyectos" className="pt-10 max-w-xl md:max-w-6xl mx-auto pb-10">
       <hr
         hidden
         className="bg-emerald-700 text-emerald-100 shadow-emerald-400"
@@ -22,19 +20,22 @@ export const Projects = () => {
       <hr hidden className="bg-gray-700 text-gray-100 shadow-gray-400" />
       <hr hidden className="bg-sky-700 text-sky-100 shadow-sky-400" />
       <hr hidden className="bg-orange-700 text-orange-100 shadow-orange-400" />
-      <h2
+      <div
         ref={titleProjects}
-        className={`opacity-0 text-gray-100 text-4xl text-center my-5 pb-3 drop-shadow-[0_2.2px_2.2px_rgba(54,255,0,1)] ${
-          inViewTitle && "opacity-100 md:animate-fade md:animate-delay-200"
+        className={`flex mb-8 justify-center gap-3 drop-shadow-[0_2.2px_2.2px_rgba(54,255,0,1)] opacity-0 ${
+          inViewTitle &&
+          " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down md:animate-delay-300"
         }`}
       >
-        Proyectos
-      </h2>
+        <h2>Proyectos </h2>
+        <BriefcaseIcon className="inline-block h-10 w-10 text-gray-100" />
+      </div>
       <section className="pb-10 bg-white rounded-xl bg-opacity-15 border-solid p-4 border-white border-2">
         <div
           ref={compProjects}
           className={`opacity-0 grid md:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10 ${
-            inViewProjects && "opacity-100 md:animate-fade-down md:animate-delay-300"
+            inViewProjects &&
+            "opacity-100 md:animate-fade-down md:animate-delay-300"
           }`}
         >
           {projects.map((project) => {

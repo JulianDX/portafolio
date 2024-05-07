@@ -1,4 +1,5 @@
 import { useInView } from "react-intersection-observer";
+import { AcademicCapIcon } from "@heroicons/react/24/solid";
 
 export const Studies = () => {
   const { ref: titleStudies, inView: inViewTitle } = useInView({
@@ -23,15 +24,16 @@ export const Studies = () => {
       id="estudios"
       className="max-w-xl md:max-w-2xl mx-auto pt-10 text-gray-100 mb-8 px-8"
     >
-      <h2
+      <div
         ref={titleStudies}
-        className={`opacity-0 ${
+        className={`flex justify-center gap-3 drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] opacity-0 ${
           inViewTitle &&
-          "md:animate-fade-down text-gray-100 text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] opacity-100"
+          " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down"
         }`}
       >
-        Estudios
-      </h2>
+        <h2>Estudios </h2>
+        <AcademicCapIcon className="inline-block h-10 w-10 text-gray-100" />
+      </div>
       <div className="mt-2 pb-0">
         <ul>
           <li
@@ -48,7 +50,10 @@ export const Studies = () => {
                 Universidad del Quindío
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Carrera: <span className="text-gray-100">Ingeniería de Sistemas y Computación</span>
+                Carrera:{" "}
+                <span className="text-gray-100">
+                  Ingeniería de Sistemas y Computación
+                </span>
               </p>
               <p className="text-lg">2018-2024</p>
             </div>
@@ -67,7 +72,8 @@ export const Studies = () => {
                 Curso Desarrollo Web Completo
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Instructor: <span className="text-gray-100">Juan Pablo de la Torre</span>
+                Instructor:{" "}
+                <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Plataforma: <span className="text-gray-100">Udemy</span>
@@ -96,7 +102,8 @@ export const Studies = () => {
                 Curso JavaScript Moderno
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Instructor: <span className="text-gray-100">Juan Pablo de la Torre</span>
+                Instructor:{" "}
+                <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Plataforma: <span className="text-gray-100">Udemy</span>
@@ -126,7 +133,8 @@ export const Studies = () => {
                 Curso React y Typescript
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Instructor: <span className="text-gray-100">Juan Pablo de la Torre</span>
+                Instructor:{" "}
+                <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Plataforma: <span className="text-gray-100">Udemy</span>

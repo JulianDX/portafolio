@@ -70,7 +70,9 @@ export const Contact = () => {
   }, [mensaje]);
 
   useEffect(() => {
-    ![nombre, email, asunto, mensaje].includes("") && mensaje.trim().length > 30 && emailRegex.test(email)
+    ![nombre, email, asunto, mensaje].includes("") &&
+    mensaje.trim().length > 30 &&
+    emailRegex.test(email)
       ? setCanSend(true)
       : setCanSend(false);
   }, [nombre, email, asunto, mensaje]);
@@ -139,19 +141,20 @@ export const Contact = () => {
       id="contacto"
       className="max-w-xl md:max-w-2xl mx-auto p-10 bg-black bg-opacity-60 rounded-lg mb-10"
     >
-      <h2
+      <div
         ref={titleContact}
-        className={` ${
+        className={`flex mb-8 justify-center gap-3 drop-shadow-[0_2.2px_2.2px_rgba(189,0,255,1)] opacity-0 ${
           inViewTitle &&
-          "md:animate-fade-down md:animate-delay-300 text-gray-100 text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(189,0,255,1)]"
+          " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down md:animate-delay-300"
         }`}
       >
-        Contacto
-      </h2>
+        <h2>Contacto </h2>
+        <EnvelopeIcon className="inline-block h-10 w-10 text-gray-100" />
+      </div>
       <div
         ref={contentContact}
         className={`opacity-0 ${
-          inViewContent && "opacity-100 md:animate-fade md:animate-delay-700"
+          inViewContent && "opacity-100 md:animate-fade md:animate-delay-500"
         }`}
       >
         <p className="text-gray-100 text-center mt-4 mb-5">

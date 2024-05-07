@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import { blandas } from "../data/data";
 import { duras } from "../data/data";
+import { PuzzlePieceIcon } from "@heroicons/react/24/solid";
 
 export const Abilities = () => {
   const { ref: titleAbilities, inView: inViewTitle } = useInView({
@@ -15,18 +16,21 @@ export const Abilities = () => {
 
   return (
     <section id="habilidades" className="max-w-xl md:max-w-5xl mx-auto pt-10">
-      <h2
+      <div
         ref={titleAbilities}
-        className={` ${
-          inViewTitle && "md:animate-fade-up text-gray-100 text-4xl text-center drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)]"
+        className={`flex justify-center gap-3 drop-shadow-[0_2.2px_2.2px_rgba(255,151,0,1)] opacity-0 ${
+          inViewTitle &&
+          " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down"
         }`}
       >
-        Habilidades
-      </h2>
+        <h2>Habilidades </h2>
+        <PuzzlePieceIcon className="inline-block h-10 w-10 text-gray-100" />
+      </div>
       <div
         ref={contentA1}
         className={`opacity-0 grid md:grid-cols-2 p-8 items-center gap-8 ${
-          inViewContent1 && "opacity-100 md:animate-fade-right md:animate-delay-500"
+          inViewContent1 &&
+          "opacity-100 md:animate-fade-right md:animate-delay-500"
         }`}
       >
         <div className="text-gray-100 text-4xl text-center">
@@ -54,8 +58,9 @@ export const Abilities = () => {
       </div>
       <div
         ref={contentA2}
-        className={`opacity-0 grid md:grid-cols-2 p-8 items-center gap-8 ${
-          inViewContent2 && "opacity-100 md:animate-fade-left md:animate-delay-700"
+        className={`opacity-0 grid md:grid-cols-2 p-8 pb-0 items-center gap-8 ${
+          inViewContent2 &&
+          "opacity-100 md:animate-fade-left md:animate-delay-500"
         }`}
       >
         <div className="text-gray-100 text-4xl text-center md:order-2">
