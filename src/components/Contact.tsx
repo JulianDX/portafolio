@@ -242,7 +242,7 @@ export const Contact = () => {
               onChange={(e) => setMensaje(e.target.value)}
             ></textarea>
             <p className="text-red-500 mt-2 text-sm" hidden={messageAlert}>
-              {mensaje.length} / {31}
+              {mensaje.trimStart().length} / {31}
             </p>
           </div>
           <div className="text-gray-100 font-semibold">
