@@ -89,6 +89,7 @@ const Header = ({ flagEs, setFlagEs }: flagProps) => {
             width={36}
             height={36}
             onClick={() => setFlagEs(!flagEs)}
+            loading="lazy"
           />
           <img
             className={`rounded-full cursor-pointer animate-rotate-y ${
@@ -99,6 +100,7 @@ const Header = ({ flagEs, setFlagEs }: flagProps) => {
             width={36}
             height={36}
             onClick={() => setFlagEs(!flagEs)}
+            loading="lazy"
           />
           <img
             className="max-w-9 md:hidden"
@@ -107,6 +109,7 @@ const Header = ({ flagEs, setFlagEs }: flagProps) => {
             onClick={() => setVisibleNav(!visibleNav)}
             width={36}
             height={36}
+            loading="lazy"
           />
         </div>
         {/*Navegación*/}
