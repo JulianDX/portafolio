@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export type blandasType = {
   habilidad: string;
 };
@@ -17,4 +19,12 @@ export type projectType = {
   repositorio: string;
   descripcion: string;
   tecnologias: tecnologiaType[];
+  img: string;
 };
+
+export type flagProps = {
+  flagEs: boolean;
+  setFlagEs: Dispatch<SetStateAction<boolean>>;
+};
+
+export type flagProp = Omit<flagProps, "setFlagEs">;

@@ -1,7 +1,8 @@
 import { useInView } from "react-intersection-observer";
 import { AcademicCapIcon } from "@heroicons/react/24/solid";
+import { flagProp } from "../types";
 
-export const Studies = () => {
+export const Studies = ({ flagEs }: flagProp) => {
   const { ref: titleStudies, inView: inViewTitle } = useInView({
     triggerOnce: true,
     initialInView: false,
@@ -31,7 +32,7 @@ export const Studies = () => {
           " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down"
         }`}
       >
-        <h2>Estudios </h2>
+        <h2>{flagEs ? "Estudios" : "Studies"}</h2>
         <AcademicCapIcon className="inline-block h-10 w-10 text-gray-100" />
       </div>
       <div className="mt-2 pb-0">
@@ -50,9 +51,11 @@ export const Studies = () => {
                 Universidad del Quindío
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Carrera:{" "}
+                {flagEs ? "Carrera" : "Career"}:{" "}
                 <span className="text-gray-100">
-                  Ingeniería de Sistemas y Computación
+                  {flagEs
+                    ? "Ingeniería de Sistemas y Computación"
+                    : "Systems Engineering and Computer Science"}
                 </span>
               </p>
               <p className="text-lg">2018-2024</p>
@@ -69,21 +72,25 @@ export const Studies = () => {
             <span className="block bg-white h-5 w-5 rounded-full"></span>
             <div className="ml-8 -mt-6 md:-mt-0 md:ml-0">
               <p className="text-3xl font-bold mb-2 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
-                Curso Desarrollo Web Completo
+                {flagEs ? "Curso" : "Course"} Desarrollo Web Completo
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Instructor:{" "}
                 <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Plataforma: <span className="text-gray-100">Udemy</span>
+                {flagEs ? "Plataforma" : "Platform"}:{" "}
+                <span className="text-gray-100">Udemy</span>
               </p>
               <p className="text-lg">2023</p>
               <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Descripción: <br />
+                {flagEs ? "Descripción" : "Description"}: <br />
                 <span className="text-gray-100">
-                  Fundamentos del Desarrollo en tecnologías como: HTML, CSS,
-                  SASS, JavaScript, Fetch, PHP, POO, MVC, SQL, MySQL y API's.
+                  {flagEs
+                    ? "Fundamentos del Desarrollo Web en tecnologías como"
+                    : "Fundamentals of Web Development in technologies such as"}
+                  : HTML, CSS, SASS, JavaScript, Fetch, PHP, POO, MVC, SQL,
+                  MySQL y API's.
                 </span>
               </p>
             </div>
@@ -99,22 +106,28 @@ export const Studies = () => {
             <span className="block bg-white h-5 w-5 rounded-full"></span>
             <div className="ml-8 -mt-6 md:-mt-0 md:ml-0">
               <p className="text-3xl font-bold mb-2 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
-                Curso JavaScript Moderno
+                {flagEs ? "Curso" : "Course"} JavaScript Moderno
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Instructor:{" "}
                 <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Plataforma: <span className="text-gray-100">Udemy</span>
+                {flagEs ? "Curso" : "Course"}:{" "}
+                <span className="text-gray-100">Udemy</span>
               </p>
               <p className="text-lg">2024</p>
               <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Descripción: <br />
+                {flagEs ? "Descripción" : "Description"}: <br />
                 <span className="text-gray-100">
-                  Fundamentos de JavaScript y temas avanzados como Prototypes,
-                  Delegation, Classes, Promises, Generadores, POO, Fetch API,
-                  Async Await, Async JS, Objetos, REST API's, API's nativas.
+                  {flagEs
+                    ? "Fundamentos de JavaScript y temas más avanzados como"
+                    : "Fundamentals of JavaScript and more advanced topics such as"}{" "}
+                  Prototypes, Delegation, Classes, Promises,{" "}
+                  {flagEs ? "Generadores" : "Generators"},{" "}
+                  {flagEs ? "POO" : "OOP"}, Fetch API, Async Await, Async JS,{" "}
+                  {flagEs ? "Objetos" : "Objects"}, REST API's,{" "}
+                  {flagEs ? "API's nativas" : "native API's"}.
                 </span>
               </p>
             </div>
@@ -130,22 +143,31 @@ export const Studies = () => {
             <span className="block bg-white h-5 w-5 rounded-full"></span>
             <div className="ml-8 -mt-6 md:-mt-0 md:ml-0">
               <p className="text-3xl font-bold mb-2 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
-                Curso React y Typescript
+                {flagEs ? "Curso" : "Course"} React y Typescript
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
                 Instructor:{" "}
                 <span className="text-gray-100">Juan Pablo de la Torre</span>
               </p>
               <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Plataforma: <span className="text-gray-100">Udemy</span>
+                {flagEs ? "Curso" : "Course"}:{" "}
+                <span className="text-gray-100">Udemy</span>
               </p>
               <p className="text-lg">2024</p>
               <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(2,162,0,1)] text-green-400">
-                Descripción: <br />
+                {flagEs ? "Descripción" : "Description"}: <br />
                 <span className="text-gray-100">
-                  Fundamentos de TypeScript y React: State, Hooks, State global
-                  con Context y Zustand, componentes y eventos, consultar API's
-                  externas y creación de API's propias.
+                  {flagEs ? "Fundamentos de" : "Fundamentals of"} TypeScript{" "}
+                  {flagEs ? "y" : "and"} React: State, Hooks,{" "}
+                  {flagEs
+                    ? "State Global con Context y Zustand"
+                    : "Global State with Context and Zustand"}
+                  , {flagEs ? "componentes y eventos" : "components and events"}
+                  ,{" "}
+                  {flagEs
+                    ? "consultar API's externas y creación de API's propias"
+                    : "fetching API's and creation of own API's"}
+                  .
                 </span>
               </p>
             </div>

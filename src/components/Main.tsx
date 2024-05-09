@@ -1,23 +1,39 @@
-import Typewriter from "../hooks/TypeWriter";
+import Typewriter from "../hooks/useTypeWriter";
 import { ArrowDownTrayIcon, MapPinIcon } from "@heroicons/react/24/solid";
+import { flagProp } from "../types";
+import { useEffect, useState } from "react";
 
-const Main = () => {
+const Main = ({ flagEs }: flagProp) => {
+  const [test, setTest] = useState(["", ""]);
+  const [key, setKey] = useState(0); // Clave única para el componente Typewriter
+
+  useEffect(() => {
+    flagEs
+      ? setTest([
+          (test[0] = "Ingeniero de Sistemas"),
+          (test[1] = "Desarrollador Web"),
+        ])
+      : setTest([(test[0] = "Systems Engineer"), (test[1] = "Web Developer")]);
+  }, [flagEs]);
+
+  useEffect(() => {
+    // Cada vez que flagEs cambia, actualizamos la clave única
+    setKey((prevKey) => prevKey + 1);
+  }, [flagEs]);
+
   return (
     <>
       <main className="text-gray-100 max-w-7xl mx-auto md:p-10 md:grid md:grid-cols-3 mt-5 gap-0 md:animate-fade-left md:animate-once md:animate-ease-in md:animate-normal">
         <div className="md:col-span-2 md:flex items-center px-4">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-center md:text-left drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)]">
-              Hola, soy{" "}
+              {flagEs ? "Hola, soy" : "Hi, I'm"}{" "}
               <span className="bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text drop-shadow-none">
                 Julián Roa Palacio
               </span>
             </h1>
             <div className="text-4xl drop-shadow-[0_3.2px_3.2px_rgba(0,78,207,1)] md:text-5xl mt-5 font-semibold text-center md:text-left h-28 lg:h-20 leading-snug md:mt-4 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">
-              <Typewriter
-                words={["Ingeniero de Sistemas", "Desarrollador Web"]}
-                delay={80}
-              />
+              <Typewriter key={key} words={test} delay={80} />
             </div>
             <div className="flex flex-col justify-center sm:grid sm:grid-cols-2 gap-4 mx-automt-5">
               <a
@@ -29,7 +45,7 @@ const Main = () => {
                 <span className="w-32 h-32 rotate-45 translate-x-60 -translate-y-2 absolute left-0 top-0 bg-white opacity-[10%]"></span>
                 <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-96 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-0"></span>
                 <span className="relative w-full text-left text-gray-100 transition-colors duration-200 ease-in-out group-hover:text-gray-900">
-                  Descargar CV
+                  {flagEs ? "Descargar CV" : "Download CV"}
                 </span>
                 <span className="absolute inset-0 border-2 border-white rounded-full"></span>
               </a>
@@ -53,13 +69,15 @@ const Main = () => {
                 </svg>
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
                 <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-12 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-180 ease"></span>
-                <span className="relative text-gray-100">Ver GitHub</span>
+                <span className="relative text-gray-100">
+                  {flagEs ? "Ver GitHub" : "View GitHub"}
+                </span>
               </a>
             </div>
             <div className="flex items-end justify-center md:justify-normal my-8 gap-2">
               <MapPinIcon className="inline-block h-10 w-10 md:animate-bounce text-red-600 drop-shadow-[0_3.2px_3.2px_rgba(171,6,6,1)]" />
               <p className="font-bold text-sky-500 drop-shadow-[0_3.2px_3.2px_rgba(6,44,171,1)]">
-                Disponible en:{" "}
+                {flagEs ? "Disponible en" : "Available in"}:{" "}
                 <span className="font-normal text-gray-100">
                   Bogotá | Armenia
                 </span>
@@ -67,7 +85,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col gap-5 justify-start items-center py-3">
+        <div className="col-span-1 flex flex-col gap-5 justify-start items-center py-3 overflow-hidden">
           <img
             className="max-w-52 md:max-w-full h-auto rounded-full box -rotate-45"
             src="img/file.webp"

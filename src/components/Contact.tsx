@@ -4,10 +4,11 @@ import { FormEvent } from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { Alert } from "@mui/material";
 import { useInView } from "react-intersection-observer";
+import { flagProp } from "../types";
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
-export const Contact = () => {
+export const Contact = ({ flagEs }: flagProp) => {
   const { ref: titleContact, inView: inViewTitle } = useInView({
     triggerOnce: true,
   });
@@ -89,7 +90,7 @@ export const Contact = () => {
     e.preventDefault();
     if (!canSend) {
       setAlertMessage({
-        msg: "Formato inválido",
+        msg: flagEs ? "Formato no válido" : "Not valid format",
         type: "error",
       });
     } else {
@@ -148,7 +149,7 @@ export const Contact = () => {
           " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down md:animate-delay-300"
         }`}
       >
-        <h2>Contacto </h2>
+        <h2>{flagEs ? "Contacto" : "Contact"}</h2>
         <EnvelopeIcon className="inline-block h-10 w-10 text-gray-100" />
       </div>
       <div
@@ -158,14 +159,17 @@ export const Contact = () => {
         }`}
       >
         <p className="text-gray-100 text-center mt-4 mb-5">
-          Envíame un correo llenando el siguiente formulario si estás interesado
-          en colaborar o si tienes alguna idea en mente.
+          {flagEs
+            ? `Envíame un correo llenando el siguiente formulario si estás interesado
+          en colaborar o si tienes alguna idea en mente`
+            : `Fill the following form if you are interested in collaborating with me or if you have any ideas on mind`}
+          .
         </p>
         <form className="py-4" onSubmit={(e) => handleSubmit(e)}>
           <div className="md:grid md:grid-cols-2 md:gap-5">
             <div className="flex flex-col">
               <label className="text-gray-100 text-xl py-2" htmlFor="nombre">
-                Nombre
+                {flagEs ? "Nombre" : "Name"}
               </label>
               <input
                 className={`rounded p-2 bg-gray-800 bg-opacity-50 text-gray-100 border-gray-100 border-2 outline-none ${
@@ -176,11 +180,11 @@ export const Contact = () => {
                 type="text"
                 onChange={(e) => setNombre(e.target.value)}
                 id="nombre"
-                placeholder="Tu nombre"
+                placeholder={`${flagEs ? "Tu Nombre" : "Your Name"}`}
                 value={nombre}
               />
               <p className="text-red-500 mt-2 text-sm" hidden={nameAlert}>
-                El nombre es obligatorio *
+                {flagEs ? "El nombre es obligatorio" : "Name's missing"} *
               </p>
             </div>
             <div className="flex flex-col mt-2 md:mt-0">
@@ -200,13 +204,14 @@ export const Contact = () => {
                 value={email}
               />
               <p className="text-red-500 mt-2 text-sm" hidden={emailAlert}>
-                Dirección no válida *
+                {flagEs ? "Dirección no válida" : "Please enter a valid email"}{" "}
+                *
               </p>
             </div>
           </div>
           <div className="flex flex-col mt-2 md:mt-0 py-2">
             <label className="text-gray-100 text-xl py-2" htmlFor="asunto">
-              Asunto
+              {flagEs ? "Asunto" : "Subject"}
             </label>
             <input
               className={`rounded p-2 bg-gray-800 bg-opacity-50 text-gray-100 border-gray-100 border-2 outline-none ${
@@ -217,16 +222,18 @@ export const Contact = () => {
               type="text"
               onChange={(e) => setAsunto(e.target.value)}
               id="asunto"
-              placeholder="Motivo del email"
+              placeholder={`${
+                flagEs ? "Motivo del email" : "Subject of the email"
+              }`}
               value={asunto}
             />
             <p className="text-red-500 mt-2 text-sm" hidden={subjectAlert}>
-              El asunto es obligatorio *
+              {flagEs ? "El asunto es obligatorio" : "Subject's missing"} *
             </p>
           </div>
           <div className="flex flex-col mt-2">
             <label className="text-gray-100 text-xl py-2" htmlFor="mensaje">
-              Mensaje
+              {flagEs ? "Mensaje" : "Message"}
             </label>
             <textarea
               className={`rounded p-2 bg-gray-800 bg-opacity-50 text-gray-100 border-gray-100 border-2 outline-none resize-none ${
@@ -237,7 +244,11 @@ export const Contact = () => {
               id="mensaje"
               cols={30}
               rows={10}
-              placeholder="Deja tu mensaje aquí..."
+              placeholder={`${
+                flagEs
+                  ? "Deja tu mensaje aquí..."
+                  : "Type your message here...."
+              }`}
               value={mensaje}
               onChange={(e) => setMensaje(e.target.value)}
             ></textarea>
@@ -266,7 +277,7 @@ export const Contact = () => {
               type="submit"
               disabled={!canSend}
             >
-              <span className="mr-2">Enviar Email</span>
+              <span className="mr-2">{flagEs ? "Enviar" : "Send"} Email</span>
               <EnvelopeIcon className="h-6 w-6" />
             </button>
           </div>

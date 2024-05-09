@@ -1,8 +1,10 @@
 import { useInView } from "react-intersection-observer";
-import { projects } from "../data/data";
+import { projectsEs, projectsEn } from "../data/data";
 import { BriefcaseIcon } from "@heroicons/react/24/solid";
+import { flagProp, projectType } from "../types";
+import { useEffect, useState } from "react";
 
-export const Projects = () => {
+export const Projects = ({ flagEs }: flagProp) => {
   const { ref: titleProjects, inView: inViewTitle } = useInView({
     triggerOnce: true,
   });
@@ -10,8 +12,17 @@ export const Projects = () => {
     triggerOnce: true,
   });
 
+  const [data, setData] = useState<projectType[]>();
+
+  useEffect(() => {
+    flagEs ? setData(projectsEs) : setData(projectsEn);
+  }, [flagEs]);
+
   return (
-    <section id="proyectos" className="pt-10 max-w-xl md:max-w-6xl mx-auto pb-10">
+    <section
+      id="proyectos"
+      className="pt-10 max-w-xl md:max-w-6xl mx-auto pb-10"
+    >
       <hr
         hidden
         className="bg-emerald-700 text-emerald-100 shadow-emerald-400"
@@ -27,7 +38,7 @@ export const Projects = () => {
           " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down md:animate-delay-300"
         }`}
       >
-        <h2>Proyectos </h2>
+        <h2>{flagEs ? "Proyectos" : "Projects"}</h2>
         <BriefcaseIcon className="inline-block h-10 w-10 text-gray-100" />
       </div>
       <section className="pb-10 bg-white rounded-xl bg-opacity-15 border-solid p-4 border-white border-2">
@@ -38,7 +49,7 @@ export const Projects = () => {
             "opacity-100 md:animate-fade-down md:animate-delay-300"
           }`}
         >
-          {projects.map((project) => {
+          {data?.map((project) => {
             return (
               <div
                 key={project.url}
@@ -47,7 +58,7 @@ export const Projects = () => {
                 <a href={project.url} target="_blank">
                   <img
                     className="rounded-xl max-w-80 w-full mx-auto -mt-5 transition-transform duration-300"
-                    src={`/img/${project.nombre}.webp`}
+                    src={`/img/${project.img}.webp`}
                     alt={project.nombre}
                     loading="lazy"
                     width={300}
@@ -101,21 +112,22 @@ export const Projects = () => {
                         />
                       </svg>
                       <span className="font-bold relative w-full px-3 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
-                        Repositorio
+                        {flagEs ? "Repositorio" : "Repository"}
                       </span>
                     </a>
                   </div>
-                  {project.nombre !== "portafolio" && (
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      className="text-left w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 text-sm font-medium text-gray-100 rounded-md bg-gradient-to-br from-purple-500 to-pink-500 hover:to-teal-300 hover:text-gray-100"
-                    >
-                      <span className="font-bold w-full h-full px-5 py-2.5">
-                        Demo
-                      </span>
-                    </a>
-                  )}
+                  {project.nombre !== "portafolio" &&
+                    project.nombre !== "portfolio" && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        className="text-left w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 text-sm font-medium text-gray-100 rounded-md bg-gradient-to-br from-purple-500 to-pink-500 hover:to-teal-300 hover:text-gray-100"
+                      >
+                        <span className="font-bold w-full h-full px-5 py-2.5">
+                          Demo
+                        </span>
+                      </a>
+                    )}
                 </div>
               </div>
             );

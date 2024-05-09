@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 type TypeWriterProps = {
-  words: [string, string];
+  words: string[];
   delay: number;
 };
 
-const Typewriter = ({ words, delay }: TypeWriterProps) => {
+const useTypewriter = ({ words, delay }: TypeWriterProps) => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -57,4 +57,4 @@ const Typewriter = ({ words, delay }: TypeWriterProps) => {
   return textWithCursor;
 };
 
-export default Typewriter;
+export default useTypewriter;
