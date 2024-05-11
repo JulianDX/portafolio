@@ -139,9 +139,9 @@ export const Projects = ({ flagEs }: flagProp) => {
                         </a>
                         <div className="p-5">
                           <a href="#">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-100 dark:text-gray-100 capitalize drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
+                            <p className="mb-2 text-2xl font-bold tracking-tight text-gray-100 dark:text-gray-100 capitalize drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
                               {project.nombre}
-                            </h5>
+                            </p>
                           </a>
                           <p className="mb-3 text-sky-300 dark:text-sky-300 font-semibold">
                             {project.descripcion}
