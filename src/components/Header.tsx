@@ -69,7 +69,7 @@ const Header = ({ flagEs, setFlagEs }: flagProps) => {
     >
       <div className="grid grid-cols-3 md:grid-cols-12 items-center w-full flex-row lg:flex-row justify-between md:items-center max-w-6xl mx-auto px-2">
         {/* Logo */}
-        <div className="p-4 col-span-2 md:col-span-12 lg:col-span-3 md:text-center lg:text-left">
+        <div className="p-3 col-span-2 md:col-span-12 lg:col-span-3 md:text-center lg:text-left">
           <p
             className="text-gray-100 text-2xl font-extrabold cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -95,7 +95,7 @@ const Header = ({ flagEs, setFlagEs }: flagProps) => {
             className={`rounded-full cursor-pointer animate-rotate-y ${
               flagEs ? "hidden" : "visible"
             }`}
-            src="https://kapowaz.github.io/square-flags/flags/us.svg"
+            src="https://kapowaz.github.io/square-flags/flags/uk.svg"
             alt="english"
             width={36}
             height={36}
