@@ -121,7 +121,7 @@ export const Projects = ({ flagEs }: flagProp) => {
                     return (
                       <div
                         key={project.nombre}
-                        className="z-20 max-w-sm bg-sky-950 border hover:scale-101 transition-transform duration-500 border-sky-500 rounded-lg shadow dark:bg-sky-950 bg-opacity-80 dark:border-sky-500"
+                        className="z-20 max-w-sm bg-sky-950 border hover:scale-101 transition-transform duration-500 border-sky-500 rounded-lg shadow dark:bg-sky-950 bg-opacity-90 dark:border-sky-500"
                       >
                         <a href="#">
                           <div className="overflow-hidden rounded-lg w-80 mx-auto -mt-6">
@@ -137,7 +137,7 @@ export const Projects = ({ flagEs }: flagProp) => {
                         </a>
                         <div className="p-5">
                           <a href="#">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white capitalize drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
+                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-100 dark:text-gray-100 capitalize drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
                               {project.nombre}
                             </h5>
                           </a>
