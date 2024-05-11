@@ -223,7 +223,7 @@ export const Contact = ({ flagEs }: flagProp) => {
                       type="email"
                       onChange={(e) => setEmail(e.target.value)}
                       id="correo"
-                      placeholder="Tu email"
+                      placeholder={`${flagEs ? "Tu Email" : "Your Email"}`}
                       value={email}
                     />
                     <p
@@ -316,7 +316,7 @@ export const Contact = ({ flagEs }: flagProp) => {
                     <div className="sk-cube3 sk-cube"></div>
                   </div>
                   <button
-                    className="text-left w-full md:w-auto relative rounded bg-gradient-to-br from-sky-600 to-blue-900 hover:from-cyan-500 hover:to-cyan-800 hover:text-gray-100 dark:text-gray-100 px-10 mt-6 py-3 flex items-center justify-center disabled:opacity-40 disabled:hover:cursor-not-allowed disabled:cursor-default disabled:hover:from-sky-600 disabled:hover:to-red-500"
+                    className="text-left w-full md:w-auto relative rounded bg-gradient-to-br from-sky-600 to-blue-900 hover:from-cyan-500 hover:to-cyan-800 hover:text-gray-100 dark:text-gray-100 px-10 mt-6 py-3 flex items-center justify-center disabled:opacity-40 disabled:hover:cursor-not-allowed disabled:cursor-default disabled:hover:from-sky-600 disabled:hover:to-cyan-700"
                     type="submit"
                     disabled={!canSend}
                   >

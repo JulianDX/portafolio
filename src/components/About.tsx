@@ -31,7 +31,7 @@ export const About = ({ flagEs }: flagProp) => {
             </p>
             <p className="mt-2">
               <span className="bg-gradient-to-l from-cyan-200 to-blue-400 text-transparent bg-clip-text">
-                {flagEs ? "País" : "Country"}
+                {flagEs ? "País" : "Country"}:
               </span>{" "}
               Colombia <span className="rounded fi fi-co"></span>
             </p>
