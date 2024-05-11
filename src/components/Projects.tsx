@@ -125,6 +125,7 @@ export const Projects = ({ flagEs }: flagProp) => {
                       >
                         <a href="#">
                           <div className="overflow-hidden rounded-lg w-80 mx-auto -mt-6">
+                            <a target="_blank" href={`${project.url}`}>
                             <img
                               className="rounded-lg hover:scale-105 transition-transform duration-500"
                               src={`/img/${project.img}.webp`}
@@ -133,6 +134,7 @@ export const Projects = ({ flagEs }: flagProp) => {
                               width={320}
                               height={320}
                             />
+                            </a>
                           </div>
                         </a>
                         <div className="p-5">
