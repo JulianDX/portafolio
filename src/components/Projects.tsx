@@ -121,7 +121,7 @@ export const Projects = ({ flagEs }: flagProp) => {
                     return (
                       <div
                         key={project.nombre}
-                        className="z-20 max-w-sm bg-white border hover:scale-101 transition-transform duration-500 border-gray-200 rounded-lg shadow dark:bg-sky-950 bg-opacity-10 dark:border-sky-500"
+                        className="z-20 max-w-sm bg-sky-950 border hover:scale-101 transition-transform duration-500 border-sky-500 rounded-lg shadow dark:bg-sky-950 bg-opacity-25 dark:border-sky-500"
                       >
                         <a href="#">
                           <div className="overflow-hidden rounded-lg w-80 mx-auto -mt-6">
