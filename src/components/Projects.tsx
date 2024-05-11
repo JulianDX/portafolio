@@ -1,9 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { projectsEs, projectsEn } from "../data/data";
-import {
-  ArrowRightCircleIcon,
-  BriefcaseIcon,
-} from "@heroicons/react/24/solid";
+import { ArrowRightCircleIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
 import { flagProp, projectType } from "../types";
 import { useEffect, useState } from "react";
 
@@ -123,9 +120,8 @@ export const Projects = ({ flagEs }: flagProp) => {
                         key={project.nombre}
                         className="z-20 max-w-sm bg-sky-950 border hover:scale-101 transition-transform duration-500 border-sky-500 rounded-lg shadow dark:bg-sky-950 bg-opacity-90 dark:border-sky-500"
                       >
-                        <a href="#">
+                        <a target="_blank" href={`${project.url}`}>
                           <div className="overflow-hidden rounded-lg w-80 mx-auto -mt-6">
-                            <a target="_blank" href={`${project.url}`}>
                             <img
                               className="rounded-lg hover:scale-105 transition-transform duration-500"
                               src={`/img/${project.img}.webp`}
@@ -134,7 +130,6 @@ export const Projects = ({ flagEs }: flagProp) => {
                               width={320}
                               height={320}
                             />
-                            </a>
                           </div>
                         </a>
                         <div className="p-5">
