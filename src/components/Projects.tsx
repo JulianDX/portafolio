@@ -141,7 +141,7 @@ export const Projects = ({ flagEs }: flagProp) => {
                               {project.nombre}
                             </h5>
                           </a>
-                          <p className="mb-3 text-sky-600 dark:text-sky-300 font-semibold">
+                          <p className="mb-3 text-sky-300 dark:text-sky-300 font-semibold">
                             {project.descripcion}
                           </p>
                           <div className="grid grid-cols-2 gap-4 pt-2">
