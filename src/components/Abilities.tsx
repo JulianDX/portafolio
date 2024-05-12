@@ -103,7 +103,7 @@ export const Abilities = ({ flagEs }: flagProp) => {
                       : "Stack of technologies I've used over some projects"}
                   </h2>
                 </div>
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 justify-items-center items-center p-2 gap-5">
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 max-w-80 mx-auto sm:max-w-full justify-items-center items-center p-2 gap-5">
                   {duras.map((habilidad) => {
                     return (
                       <img
