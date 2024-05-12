@@ -91,8 +91,8 @@ const Main = ({ flagEs }: flagProp) => {
             </div>
             <div className="col-span-1 flex flex-col gap-5 justify-start items-center py-3 overflow-hidden">
               <img
-                className="max-w-52 md:max-w-full h-auto rounded-full box -rotate-45"
-                src="img/file.webp"
+                className="max-w-52 md:max-w-full h-auto rounded-full box rotate-12"
+                src="img/julian.webp"
                 alt="Imagen perfil"
                 width={321}
                 height={251}
