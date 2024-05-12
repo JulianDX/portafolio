@@ -27,7 +27,7 @@ const Main = ({ flagEs }: flagProp) => {
         <div className="absolute bottom-0 right-0 h-screen w-full rounded-full bg-[radial-gradient(circle_farthest-side,rgba(0,134,192,.15),rgba(255,255,255,0))]"></div>
         <div className="absolute bottom-0 h-full w-full rounded-full bg-[radial-gradient(circle_farthest-side,rgba(0,134,192,.15),rgba(255,255,255,0))]"></div>
         <main className="text-gray-100 bg-transparent pt-72 md:pt-6 -mt-24 md:-mt-32 md:pb-10 gap-0">
-          <div className="max-w-6xl mx-auto md:px-4 pt-32 md:pt-36 md:grid md:grid-cols-3 md:animate-fade-left md:animate-once md:animate-ease-in md:animate-normal">
+          <div className="max-w-6xl mx-auto md:px-4 pt-28 md:pt-36 md:grid md:grid-cols-3 md:animate-fade-left md:animate-once md:animate-ease-in md:animate-normal">
             <div className="md:col-span-2 md:flex items-center px-4">
               <div>
                 <h1 className="text-4xl md:text-5xl font-extrabold text-center md:text-left drop-shadow-[0_3.2px_3.2px_rgba(0,78,207,1)]">
@@ -36,7 +36,7 @@ const Main = ({ flagEs }: flagProp) => {
                     Julián Roa Palacio
                   </span>
                 </h1>
-                <div className="text-4xl px-2 drop-shadow-[0_3.2px_3.2px_rgba(0,78,207,1)] md:text-5xl mt-5 mb-3 font-semibold text-center md:text-left h-28 lg:h-20 leading-snug md:mt-4 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">
+                <div className="text-4xl drop-shadow-[0_3.2px_3.2px_rgba(0,78,207,1)] md:text-5xl mt-5 font-semibold text-center md:text-left h-28 lg:h-20 leading-snug md:mt-4 bg-gradient-to-l from-cyan-100 to-blue-400 text-transparent bg-clip-text">
                   <Typewriter key={key} words={test} delay={80} />
                 </div>
                 <div className="flex flex-col justify-center sm:grid sm:grid-cols-2 gap-4 mx-automt-5">
@@ -91,13 +91,13 @@ const Main = ({ flagEs }: flagProp) => {
             </div>
             <div className="col-span-1 flex flex-col gap-5 justify-start items-center py-3 overflow-hidden">
               <img
-                className="max-w-52 md:max-w-full h-auto rounded-full box rotate-12 hidden sm:block"
+                className="max-w-52 md:max-w-full h-auto rounded-full box rotate-12"
                 src="img/julian.webp"
                 alt="Imagen perfil"
                 width={321}
                 height={251}
               />
-              <div className="flex gap-4 mt-1">
+              <div className="flex gap-4">
                 <a
                   aria-label="LinkedIn"
                   href="https://www.linkedin.com/in/julian-fernando-roa-palacio-101840253/"
