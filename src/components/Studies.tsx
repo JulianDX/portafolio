@@ -83,7 +83,7 @@ export const Studies = ({ flagEs }: flagProp) => {
                   >
                     <span className="border-l-4 ml-2 border-l-white absolute h-full" />
                     <span className="block bg-white h-5 w-5 rounded-full"></span>
-                    <div className="ml-8 -mt-6 md:-mt-0 md:ml-0 bg-slate-950 p-6 rounded-xl bg-opacity-80">
+                    <div className="ml-8 -mt-6 md:-mt-0 md:ml-0 bg-slate-950 p-6 rounded-xl bg-opacity-80 border border-gray-700 border-solid">
                       <p className="text-3xl font-bold mb-2 drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
                         Universidad del Quindío
                       </p>
@@ -107,7 +107,7 @@ export const Studies = ({ flagEs }: flagProp) => {
                   >
                     <span className="border-l-4 ml-2 border-l-white absolute h-full" />
                     <span className="block bg-white h-5 w-5 rounded-full"></span>
-                    <div className="ml-8 -mt-6 md:-mt-0 md:ml-0 bg-slate-950 p-6 rounded-xl bg-opacity-80">
+                    <div className="ml-8 -mt-6 md:-mt-0 md:ml-0 bg-slate-950 p-6 rounded-xl bg-opacity-80 border border-gray-700 border-solid">
                       <p className="text-3xl font-bold mb-2 drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
                         {flagEs ? "Curso" : "Course"} Desarrollo Web Completo
                       </p>
@@ -143,7 +143,7 @@ export const Studies = ({ flagEs }: flagProp) => {
                   >
                     <span className="border-l-4 ml-2 border-l-white absolute h-full" />
                     <span className="block bg-white h-5 w-5 rounded-full"></span>
-                    <div className="ml-8 -mt-6 md:-mt-0 md:ml-0 bg-slate-950 p-6 rounded-xl bg-opacity-80">
+                    <div className="ml-8 -mt-6 md:-mt-0 md:ml-0 bg-slate-950 p-6 rounded-xl bg-opacity-80 border border-gray-700 border-solid">
                       <p className="text-3xl font-bold mb-2 bg-gradient-to-l drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
                         {flagEs ? "Curso" : "Course"} JavaScript Moderno
                       </p>
@@ -182,7 +182,7 @@ export const Studies = ({ flagEs }: flagProp) => {
                   >
                     <span className="border-l-4 ml-2 border-l-white absolute h-full" />
                     <span className="block bg-white h-5 w-5 rounded-full"></span>
-                    <div className="ml-8 -mt-6 md:-mt-0 md:ml-0 bg-slate-950 p-6 rounded-xl bg-opacity-80">
+                    <div className="ml-8 -mt-6 md:-mt-0 md:ml-0 bg-slate-950 p-6 rounded-xl bg-opacity-80 border border-gray-700 border-solid">
                       <p className="text-3xl font-bold mb-2 bg-gradient-to-l drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
                         {flagEs ? "Curso" : "Course"} React y Typescript
                       </p>

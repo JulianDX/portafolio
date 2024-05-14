@@ -160,7 +160,7 @@ export const Contact = ({ flagEs }: flagProp) => {
           >
             <div
               ref={titleContact}
-              className={`flex mb-8 justify-center gap-3 drop-shadow-[0_2.2px_2.2px_rgba(189,0,255,1)] opacity-0 ${
+              className={`flex mb-8 justify-center gap-3 drop-shadow-[0_2.2px_2.2px_rgba(2,114,171,1)] opacity-0 ${
                 inViewTitle &&
                 " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down md:animate-delay-300"
               }`}
