@@ -22,10 +22,10 @@ export const Studies = ({ flagEs }: flagProp) => {
 
   return (
     <>
-      <section className="bg-slate-900">
+      <section className="bg-gray-900">
         <div>
           <svg
-            className="separator"
+            className="separator -mt-1"
             width="100%"
             height="50"
             viewBox="0.1 0.1 180 40"
@@ -33,11 +33,11 @@ export const Studies = ({ flagEs }: flagProp) => {
           >
             <g transform="translate(-18.298844,-77.973964)">
               <path
-                style={{ fill: "#0FBFF3" }}
+                style={{ fill: "#4280cc" }}
                 d="M 31.615583,86.351641 H 192.16499 v 26.901969 c 0,0 -32.03411,-14.237983 -59.62682,-12.72484 -22.34188,1.2252 -54.779359,9.72634 -54.779359,9.72634 0,0 -22.029534,3.62882 -34.471238,-1.88988 -12.441702,-5.51871 -11.67199,-22.013589 -11.67199,-22.013589 z"
               />
               <path
-                style={{ fill: "#0D4657" }}
+                style={{ fill: "#60A5FA" }}
                 d="M 18.441597,78.106256 H 198.58126 v 39.288614 c 0,0 -43.10672,-27.825245 -73.47599,-19.687823 -30.369264,8.137423 -46.832208,12.548653 -46.832208,12.548653 0,0 -32.775418,8.05972 -46.735258,0 C 17.577964,102.19598 18.441597,78.106256 18.441597,78.106256 Z"
               />
             </g>
@@ -67,10 +67,10 @@ export const Studies = ({ flagEs }: flagProp) => {
                   " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down"
                 }`}
               >
-                <h2 className="text-cyan-300">
+                <h2 className="text-sky-300">
                   {flagEs ? "Estudios" : "Studies"}
                 </h2>
-                <AcademicCapIcon className="inline-block h-10 w-10 text-cyan-300" />
+                <AcademicCapIcon className="inline-block h-10 w-10 text-sky-300" />
               </div>
               <div className="mt-2 pb-0 max-w-xl md:max-w-2xl mx-auto">
                 <ul>

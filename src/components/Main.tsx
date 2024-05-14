@@ -231,16 +231,16 @@ const Main = ({ flagEs }: flagProp) => {
               />
             </defs>
             <g className="parallax1">
-              <use xlinkHref="#gentle-wave" x="50" y="3" fill="#8FE6FF" />
+              <use xlinkHref="#gentle-wave" x="50" y="3" fill="#7ac3ff" />
             </g>
             <g className="parallax2">
-              <use xlinkHref="#gentle-wave" x="50" y="0" fill="#005F87" />
+              <use xlinkHref="#gentle-wave" x="50" y="0" fill="#4280cc" />
             </g>
             <g className="parallax3">
-              <use xlinkHref="#gentle-wave" x="50" y="9" fill="#368AAD" />
+              <use xlinkHref="#gentle-wave" x="50" y="9" fill="#265ea1" />
             </g>
             <g className="parallax4">
-              <use xlinkHref="#gentle-wave" x="50" y="6" fill="#4AC9FF" />
+              <use xlinkHref="#gentle-wave" x="50" y="6" fill="#60A5FA" />
             </g>
           </svg>
         </main>

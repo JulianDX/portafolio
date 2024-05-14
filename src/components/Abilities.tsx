@@ -24,7 +24,7 @@ export const Abilities = ({ flagEs }: flagProp) => {
 
   return (
     <>
-      <section className="relative h-full w-full bg-neutral-900">
+      <section className="relative h-full w-full bg-sky-950">
         <div className="absolute inset-0 bg-sky-400 bg-[size:20px_20px] bg-opacity-15 blur-[100px]"></div>
         <div>
           <div className="custom-shape-divider-top-1715363249">
