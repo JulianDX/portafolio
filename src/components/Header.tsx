@@ -69,7 +69,7 @@ const Header = ({ flagEs, setFlagEs }: flagProps) => {
     >
       <div className="grid grid-cols-3 md:grid-cols-12 items-center w-full flex-row lg:flex-row justify-between md:items-center max-w-6xl mx-auto px-2">
         {/* Logo */}
-        <div className="p-3 col-span-2 md:col-span-12 lg:col-span-3 md:text-center lg:text-left">
+        <div className="p-3 md:pb-0 lg:pb-3 col-span-2 md:col-span-12 lg:col-span-3 md:text-center lg:text-left">
           <p
             className="text-gray-100 text-2xl font-extrabold cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -102,15 +102,18 @@ const Header = ({ flagEs, setFlagEs }: flagProps) => {
             onClick={() => setFlagEs(!flagEs)}
             loading="lazy"
           />
-          <img
-            className="max-w-9 md:hidden"
-            src="/img/barras.svg"
-            alt="menu desplegable"
+          <div
+            className="frame md:hidden"
             onClick={() => setVisibleNav(!visibleNav)}
-            width={36}
-            height={36}
-            loading="lazy"
-          />
+          >
+            <div className="center">
+              <div className={`menu-icon ${visibleNav && "active"}`}>
+                <div className={`line-1 ${!visibleNav && "active"}`}></div>
+                <div className={`line-2 ${!visibleNav && "active"}`}></div>
+                <div className={`line-3 ${!visibleNav && "active"}`}></div>
+              </div>
+            </div>
+          </div>
         </div>
         {/*Navegación*/}
         <div className="flex col-span-3 md:col-start-2 md:py-4 md:col-span-10 justify-center lg:justify-end lg:col-span-8 md:items-center flex-col md:flex-row items-end md:gap-3">
