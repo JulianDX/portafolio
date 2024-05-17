@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { projectsEs, projectsEn } from "../data/data";
-import { ArrowRightCircleIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
+import { BriefcaseIcon } from "@heroicons/react/24/solid";
 import { flagProp, projectType } from "../types";
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
