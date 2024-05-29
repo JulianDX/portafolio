@@ -22,54 +22,9 @@ export const Projects = ({ flagEs }: flagProp) => {
   return (
     <>
       <div className="wrapper overflow-hidden">
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
-        <div className="bubble">
-          <span className="dot"></span>
-        </div>
         {/* Contenido */}
         <section>
-          <div className="relative custom-shape-divider-top-1715369110">
+          <div className="relative custom-shape-divider-top-1715369110 -mt-1">
             <svg
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -99,13 +54,13 @@ export const Projects = ({ flagEs }: flagProp) => {
             >
               <div
                 ref={titleProjects}
-                className={`flex justify-center text-sky-300 bg-black rounded-full w-auto md:w-96 mx-auto bg-opacity-40 py-3 gap-3 drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] opacity-0 ${
+                className={`flex justify-center text-gray-100 w-auto md:w-96 mx-auto bg-opacity-40 py-3 gap-3 drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] opacity-0 ${
                   inViewTitle &&
                   " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down md:animate-delay-300"
                 }`}
               >
                 <h2>{flagEs ? "Proyectos" : "Projects"}</h2>
-                <BriefcaseIcon className="inline-block h-10 w-10 text-sky-300" />
+                <BriefcaseIcon className="inline-block h-10 w-10 text-gray-100" />
               </div>
               <section className="pb-10">
                 <div
@@ -116,7 +71,11 @@ export const Projects = ({ flagEs }: flagProp) => {
                   }`}
                 >
                   {data?.map((project) => (
-                    <Card key={project.nombre} project={project} flagEs={flagEs} />
+                    <Card
+                      key={project.nombre}
+                      project={project}
+                      flagEs={flagEs}
+                    />
                   ))}
                 </div>
               </section>

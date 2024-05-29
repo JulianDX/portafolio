@@ -94,6 +94,19 @@ export const duras: durasType[] = [
 
 export const projectsEs: projectType[] = [
   {
+    nombre: "uptask - en progreso",
+    url: "#",
+    repositorio: "https://github.com/stars/JulianDX/lists/uptask",
+    descripcion: `Herramienta colaborativa para equipos de trabajo con el fin de ayudar a organizar, realizar un seguimiento y gestionar las tareas de un proyecto.`,
+    tecnologias: [
+      { nombre: "mongo", color: "emerald" },
+      { nombre: "express", color: "sky" },
+      { nombre: "react", color: "gray" },
+      { nombre: "node", color: "violet" },
+    ],
+    img: "uptask",
+  },
+  {
     nombre: "veterinaria",
     url: "https://veterinaria-ashy.vercel.app/",
     repositorio: "https://github.com/stars/JulianDX/lists/veterinaria",
@@ -159,6 +172,19 @@ export const projectsEs: projectType[] = [
 ];
 
 export const projectsEn: projectType[] = [
+  {
+    nombre: "uptask - in progress",
+    url: "#",
+    repositorio: "https://github.com/stars/JulianDX/lists/uptask",
+    descripcion: `Collaborative tool for work teams designed to help organize, track, and manage project tasks.`,
+    tecnologias: [
+      { nombre: "mongo", color: "emerald" },
+      { nombre: "express", color: "sky" },
+      { nombre: "react", color: "gray" },
+      { nombre: "node", color: "violet" },
+    ],
+    img: "uptask",
+  },
   {
     nombre: "veterinary",
     url: "https://veterinaria-ashy.vercel.app/",

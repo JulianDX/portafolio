@@ -22,7 +22,7 @@ export const Studies = ({ flagEs }: flagProp) => {
 
   return (
     <>
-      <section className="bg-gray-900">
+      <section className="studies">
         <div>
           <svg
             className="separator -mt-1"
@@ -67,10 +67,10 @@ export const Studies = ({ flagEs }: flagProp) => {
                   " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down"
                 }`}
               >
-                <h2 className="text-sky-300">
+                <h2 className="text-gray-100">
                   {flagEs ? "Estudios" : "Studies"}
                 </h2>
-                <AcademicCapIcon className="inline-block h-10 w-10 text-sky-300" />
+                <AcademicCapIcon className="inline-block h-10 w-10 text-gray-100" />
               </div>
               <div className="mt-2 pb-0 max-w-xl md:max-w-2xl mx-auto">
                 <ul>

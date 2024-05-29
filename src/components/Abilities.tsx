@@ -24,8 +24,8 @@ export const Abilities = ({ flagEs }: flagProp) => {
 
   return (
     <>
-      <section className="relative h-full w-full bg-sky-950">
-        <div className="absolute inset-0 bg-sky-400 bg-[size:20px_20px] bg-opacity-15 blur-[100px]"></div>
+      <section className="relative h-full w-full bg-blue-800">
+        <div className="absolute inset-0 bg-sky-400 bg-[size:20px_20px] bg-opacity-15 mt-1"></div>
         <div>
           <div className="custom-shape-divider-top-1715363249">
             <svg
@@ -48,13 +48,13 @@ export const Abilities = ({ flagEs }: flagProp) => {
             >
               <div
                 ref={titleAbilities}
-                className={`flex justify-center gap-3 drop-shadow-[0_2.2px_2.2px_rgba(156,0,154,1)] md:opacity-0 ${
+                className={`flex justify-center gap-3 drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] opacity-0 ${
                   inViewTitle &&
-                  "text-4xl text-center opacity-100 md:animate-fade-down text-pink-200"
+                  " text-gray-100 text-4xl text-center opacity-100 md:animate-fade-down"
                 }`}
               >
                 <h2>{flagEs ? "Habilidades" : "Abilities"}</h2>
-                <PuzzlePieceIcon className="inline-block h-10 w-10 text-pink-200" />
+                <PuzzlePieceIcon className="inline-block h-10 w-10 text-gray-100" />
               </div>
               <div
                 ref={contentA1}
@@ -63,8 +63,8 @@ export const Abilities = ({ flagEs }: flagProp) => {
                   "opacity-100 md:animate-fade-right md:animate-delay-500"
                 }`}
               >
-                <div className="text-gray-100 text-4xl text-center">
-                  <h2 className="bg-gradient-to-r font-extrabold from-cyan-300 to-blue-400 drop-shadow-[0_2.2px_2.2px_rgba(2,114,171,1)] text-transparent bg-clip-text text-center md:text-left">
+                <div className="text-gray-200 text-4xl text-center">
+                  <h2 className="bg-gradient-to-r font-normal  drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] text-center md:text-left">
                     {flagEs
                       ? "Valoro las habilidades técnicas tanto como las blandas"
                       : "I value soft skills as much as technical ones"}
@@ -78,7 +78,7 @@ export const Abilities = ({ flagEs }: flagProp) => {
                         <li key={blanda.habilidad}>
                           <div className="mx-auto w-full items-center justify-center">
                             <div className="h-12 w-full rounded-md bg-transparent p-1">
-                              <div className="flex h-full w-full items-center justify-center py-5 bg-sky-600 bg-opacity-25 rounded-lg hover:bg-sky-300 ease-linear hover:text-sky-900 transition-colors border-solid border-sky-500 border-2">
+                              <div className="flex h-full w-full items-center justify-center py-5 bg-sky-950 bg-opacity-25 rounded-lg hover:bg-sky-300 ease-linear hover:text-sky-950 transition-colors border-solid border-sky-300 border-2">
                                 <p className="drop-shadow-[0_2.2px_2.2px_rgba(0,70,104,1)]">{blanda.habilidad}</p>
                               </div>
                             </div>
@@ -97,7 +97,7 @@ export const Abilities = ({ flagEs }: flagProp) => {
                 }`}
               >
                 <div className="text-gray-100 text-4xl text-center md:order-2">
-                  <h2 className="bg-gradient-to-r font-extrabold from-purple-300 to-pink-400 drop-shadow-[0_2.2px_2.2px_rgba(156,0,154,1)] text-transparent bg-clip-text text-center md:text-left">
+                <h2 className="bg-gradient-to-r font-normal  drop-shadow-[0_2.2px_2.2px_rgba(0,78,207,1)] text-center md:text-left">
                     {flagEs
                       ? "Tecnologías que he empleado en diversos proyectos"
                       : "Stack of technologies I've used over some projects"}
@@ -108,7 +108,7 @@ export const Abilities = ({ flagEs }: flagProp) => {
                     return (
                       <img
                         key={habilidad.tecnologia}
-                        className="transition-all max-w-max-h-24 max-h-24 ease-linear bg-fuchsia-700 p-3 bg-opacity-25 rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite border-solid border-fuchsia-400 border-2"
+                        className="transition-all max-w-max-h-24 max-h-24 ease-linear bg-sky-950 p-3 bg-opacity-25 rounded-2xl hover:p-2 hover:animate-wiggle hover:animate-infinite border-solid border-sky-300 border-2"
                         src={`img/${habilidad.tecnologia}.svg`}
                         alt={habilidad.tecnologia}
                         loading="lazy"

@@ -12,7 +12,7 @@ export const Card = ({ project, flagEs }: CardProps) => {
   return (
     <div
       key={project.nombre}
-      className="z-20 max-w-sm mx-auto bg-sky-950 border hover:scale-101 transition-transform duration-500 border-sky-500 rounded-lg shadow dark:bg-sky-950 bg-opacity-90 dark:border-sky-500"
+      className="z-20 max-w-sm mx-auto bg-blue-950 border hover:scale-101 transition-transform duration-500 border-blue-500 rounded-lg shadow dark:bg-blue-950 bg-opacity-90 dark:border-blue-500"
     >
       <a target="_blank" href={`${project.url}`}>
         <div className="overflow-hidden rounded-lg w-80 mx-auto -mt-6">
@@ -30,7 +30,7 @@ export const Card = ({ project, flagEs }: CardProps) => {
         <p className="mb-2 text-2xl font-bold tracking-tight text-gray-100 dark:text-gray-100 capitalize drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)]">
           {project.nombre}
         </p>
-        <p className="mb-3 text-sky-300 dark:text-sky-300 font-semibold">
+        <p className="mb-3 text-blue-300 dark:text-blue-300 font-semibold">
           {hiddenDescription
             ? `${project.descripcion.slice(0, 55)}...`
             : project.descripcion}
@@ -46,7 +46,7 @@ export const Card = ({ project, flagEs }: CardProps) => {
             return (
               <span
                 key={tecnologia.nombre}
-                className={`capitalize border dark:border-sky-500 font-semibold w-full inline-flex items-center justify-items-center gap-1.5 py-1.5 px-3 rounded-full text-xs bg-slate-900 text-sky-100 shadow-md shadow-sky-700`}
+                className={`capitalize border dark:border-blue-500 font-semibold w-full inline-flex items-center justify-items-center gap-1.5 py-1.5 px-3 rounded-full text-xs bg-slate-900 text-blue-100 shadow-md shadow-blue-700`}
               >
                 <img
                   className="h-5 w-5"
@@ -66,7 +66,7 @@ export const Card = ({ project, flagEs }: CardProps) => {
             <a
               href={project.repositorio}
               target="_blank"
-              className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-100 rounded-md group bg-gradient-to-br from-sky-800 to-blue-700 hover:to-sky-400 hover:text-gray-100 dark:text-gray-100"
+              className="text-left relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-100 rounded-md group bg-gradient-to-br from-blue-800 to-blue-700 hover:to-blue-400 hover:text-gray-100 dark:text-gray-100"
             >
               <svg
                 className="w-7 h-7 ml-2"

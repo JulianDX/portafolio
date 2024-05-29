@@ -256,6 +256,10 @@
         background-color: #60A5FA;
     }
 
+    .studies {
+        background-color: #001942;
+    }
+
     .custom-shape-divider-top-1715395463 {
         position: relative;
         top: 0;
@@ -274,13 +278,13 @@
     }
 
     .custom-shape-divider-top-1715395463 .shape-fill {
-        fill: #030423;
+        fill: #001942;
     }
 
 
     .wrapper {
         width: 100%;
-        background: linear-gradient(180deg, #007caa, 5%, #0c78c4, 50%, #030423);
+        background-color: #001942;
         position: relative;
     }
 
@@ -312,7 +316,7 @@
     }
 
     .custom-shape-divider-top-1715369110 .shape-fill {
-        fill: #001942;
+        fill: #2252BA;
     }
 
     .custom-shape-divider-top-1715363249 {
@@ -333,7 +337,7 @@
     }
 
     .custom-shape-divider-top-1715363249 .shape-fill {
-        fill: #1354b6;
+        fill: #001942;
     }
 
     .container {
