@@ -1,18 +1,36 @@
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 import { projectType } from "../types";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 type CardProps = {
   project: projectType;
   flagEs: boolean;
+  index: number;
 };
 
-export const Card = ({ project, flagEs }: CardProps) => {
+const delay: { [key: number]: number } = {
+  0: 200,
+  1: 400,
+  2: 600,
+  3: 800,
+  4: 1000,
+};
+
+export const Card = ({ project, flagEs, index }: CardProps) => {
   const [hiddenDescription, setHiddenDescription] = useState(true);
+
+  const { ref: card, inView: inViewCard } = useInView({
+    triggerOnce: true,
+  });
   return (
     <div
+      ref={card}
       key={project.nombre}
-      className="z-20 max-w-sm mx-auto bg-blue-950 border hover:scale-101 transition-transform duration-500 border-blue-500 rounded-lg shadow dark:bg-blue-950 bg-opacity-90 dark:border-blue-500"
+      className={`project-${delay[index]} md:opacity-0 ${
+        inViewCard && "opacity-100 md:animate-fade-down"
+      } z-20 max-w-sm mx-auto bg-blue-950 border hover:scale-101 transition-transform duration-500 border-blue-500 rounded-lg shadow dark:bg-blue-950 bg-opacity-90 dark:border-blue-500}
+      `}
     >
       <a target="_blank" href={`${project.url}`}>
         <div className="overflow-hidden rounded-lg w-80 mx-auto -mt-6">
@@ -39,7 +57,13 @@ export const Card = ({ project, flagEs }: CardProps) => {
           onClick={() => setHiddenDescription(!hiddenDescription)}
           className="mb-3 text-gray-100 cursor-pointer inline-block font-semibold hover:text-gray-200"
         >
-          {hiddenDescription ? flagEs ? "Ver más" : "View more" : flagEs ? "Ver menos" : "View less"}
+          {hiddenDescription
+            ? flagEs
+              ? "Ver más"
+              : "View more"
+            : flagEs
+            ? "Ver menos"
+            : "View less"}
         </p>
         <div className="grid grid-cols-2 gap-4 pt-2">
           {project.tecnologias.map((tecnologia) => {

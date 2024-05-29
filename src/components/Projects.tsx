@@ -9,9 +9,6 @@ export const Projects = ({ flagEs }: flagProp) => {
   const { ref: titleProjects, inView: inViewTitle } = useInView({
     triggerOnce: true,
   });
-  const { ref: compProjects, inView: inViewProjects } = useInView({
-    triggerOnce: true,
-  });
 
   const [data, setData] = useState<projectType[]>();
 
@@ -64,17 +61,14 @@ export const Projects = ({ flagEs }: flagProp) => {
               </div>
               <section className="pb-10">
                 <div
-                  ref={compProjects}
-                  className={`opacity-0 grid md:grid-cols-2 lg:grid-cols-3 items-start gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10 ${
-                    inViewProjects &&
-                    "opacity-100 md:animate-fade-down md:animate-delay-300"
-                  }`}
+                  className={`grid md:grid-cols-2 lg:grid-cols-3 items-start gap-5 pt-12 space-y-10 md:space-y-0 md:gap-y-10`}
                 >
-                  {data?.map((project) => (
+                  {data?.map((project, index) => (
                     <Card
                       key={project.nombre}
                       project={project}
                       flagEs={flagEs}
+                      index={index}
                     />
                   ))}
                 </div>

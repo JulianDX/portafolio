@@ -7,6 +7,26 @@
     src: url('/fonts/Poppins-Medium.ttf') format('woff2'),
 }
 
+.project-200{
+    animation-delay: 200ms !important;
+}
+
+.project-400{
+    animation-delay: 500ms !important;
+}
+
+.project-600{
+    animation-delay: 800ms !important;
+}
+
+.project-800{
+    animation-delay: 200ms !important;
+}
+
+.project-1000{
+    animation-delay: 500ms !important;
+}
+
 @layer base {
 
     .frame {

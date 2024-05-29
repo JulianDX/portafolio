@@ -95,6 +95,12 @@ export const Studies = ({ flagEs }: flagProp) => {
                             : "Systems Engineering and Computer Science"}
                         </span>
                       </p>
+                      <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
+                        Duración:{" "}
+                        <span className="text-gray-100">
+                          {flagEs ? "10 Semestres" : "10 Semesters"}
+                        </span>
+                      </p>
                       <p className="text-lg">2018-2024</p>
                     </div>
                   </li>
@@ -120,6 +126,12 @@ export const Studies = ({ flagEs }: flagProp) => {
                       <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
                         {flagEs ? "Plataforma" : "Platform"}:{" "}
                         <span className="text-gray-100">Udemy</span>
+                      </p>
+                      <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
+                        Duración:{" "}
+                        <span className="text-gray-100">
+                          {flagEs ? "83 Horas" : "83 Hours"}
+                        </span>
                       </p>
                       <p className="text-lg">2023</p>
                       <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
@@ -156,6 +168,12 @@ export const Studies = ({ flagEs }: flagProp) => {
                       <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
                         {flagEs ? "Curso" : "Course"}:{" "}
                         <span className="text-gray-100">Udemy</span>
+                      </p>
+                      <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
+                        Duración:{" "}
+                        <span className="text-gray-100">
+                          {flagEs ? "53 Horas" : "53 Hours"}
+                        </span>
                       </p>
                       <p className="text-lg">2024</p>
                       <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
@@ -195,6 +213,12 @@ export const Studies = ({ flagEs }: flagProp) => {
                       <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
                         {flagEs ? "Curso" : "Course"}:{" "}
                         <span className="text-gray-100">Udemy</span>
+                      </p>
+                      <p className="text-lg drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
+                        Duración:{" "}
+                        <span className="text-gray-100">
+                          {flagEs ? "57 Horas" : "57 Hours"}
+                        </span>
                       </p>
                       <p className="text-lg">2024</p>
                       <p className="text-lg max-w-lg mt-3 drop-shadow-[0_2.2px_2.2px_rgba(1,58,172,1)] text-cyan-300">
