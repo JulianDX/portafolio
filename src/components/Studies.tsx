@@ -227,16 +227,16 @@ export const Studies = ({ flagEs }: flagProp) => {
                           {flagEs ? "Fundamentos de" : "Fundamentals of"}{" "}
                           TypeScript {flagEs ? "y" : "and"} React: State, Hooks,{" "}
                           {flagEs
-                            ? "State Global con Context y Zustand"
-                            : "Global State with Context and Zustand"}
+                            ? "State Global con Context y Zustand, validación de datos con Zod"
+                            : "Global State with Context and Zustand, validation with Zod"}
                           ,{" "}
                           {flagEs
                             ? "componentes y eventos"
                             : "components and events"}
                           ,{" "}
                           {flagEs
-                            ? "consultar API's externas y creación de API's propias"
-                            : "fetching API's and creation of own API's"}
+                            ? "consultar API's externas, creación de API's propias y Next"
+                            : "fetching API's, creation of own API's and Next"}
                           .
                         </span>
                       </p>
